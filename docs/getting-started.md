@@ -125,7 +125,7 @@ where [`find_company`](guide/finding-companies.md) keeps its company index
 
 ## Your first filing
 
-Need a company identifier? [Find a company](find/) searches by name, ticker,
+Need a company identifier? [Find a company](find/index.md) searches by name, ticker,
 ISIN or LEI in your browser and gives you a ready-to-copy `Company(...)` line.
 
 Open a company with the identifier its market uses, select a filing, and read
