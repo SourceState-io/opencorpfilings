@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="282 222 704 868" role="img" aria-label="OpenCorpFilings">
+  <title>OpenCorpFilings</title>
+  <g stroke="#FFFFFF" stroke-width="58" fill="none" stroke-linejoin="round">
+    <path d="M342,708 V380 Q342,280 442,280 H740" stroke-linejoin="miter"/>
+    <path d="M740,280 L928,468 V932 Q928,1032 828,1032 H442 Q342,1032 342,932 V922"/>
+    <path d="M312,830 H458 Q492,830 514,800 L562,734 Q590,694 636,694 H700"/>
+    <path d="M312,922 H552 Q584,922 612,898"/>
+    <circle cx="757" cy="690" r="56" stroke-width="52"/>
+    <circle cx="678" cy="880" r="56" stroke-width="52"/>
+  </g>
+  <path d="M726,251 H770 L957,438 V486 H772 Q726,486 726,440 Z" fill="#FFFFFF"/>
+  <g stroke="#34D399" stroke-width="58" fill="none" stroke-linejoin="round">
+    <path d="M312,736 H404 Q434,736 452,710 L528,602"/>
+    <circle cx="567" cy="540" r="56" stroke-width="52"/>
+  </g>
+</svg>

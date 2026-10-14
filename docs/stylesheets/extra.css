@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&display=swap");
+
+/* Brand: midnight navy #0B2545, emerald #10B981, graphite #374151. */
+:root {
+  --ocf-navy: #0B2545;
+  --ocf-emerald: #10B981;
+  --ocf-emerald-light: #34D399;
+  --ocf-graphite: #374151;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--ocf-navy);
+  --md-primary-fg-color--light: #13365F;
+  --md-primary-fg-color--dark: #071A33;
+  --md-primary-bg-color: #FFFFFF;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+  --md-accent-fg-color: #059669;
+  --md-accent-fg-color--transparent: rgba(16, 185, 129, 0.1);
+  --md-typeset-a-color: #047857;
+  --md-default-fg-color: var(--ocf-graphite);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--ocf-navy);
+  --md-primary-fg-color--light: #13365F;
+  --md-primary-fg-color--dark: #071A33;
+  --md-primary-bg-color: #FFFFFF;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+  --md-accent-fg-color: var(--ocf-emerald-light);
+  --md-accent-fg-color--transparent: rgba(52, 211, 153, 0.1);
+  --md-typeset-a-color: var(--ocf-emerald-light);
+  --md-default-bg-color: #0D1726;
+  --md-code-bg-color: #142238;
+}
+
+/* The tab bar shares the header colour. */
+.md-tabs {
+  background-color: var(--ocf-navy);
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-header__title {
+  font-family: "Outfit", var(--md-text-font-family), sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="default"] .md-typeset h1,
+[data-md-color-scheme="default"] .md-typeset h2 {
+  color: var(--ocf-navy);
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+}
+
+/* A heading kept for the page title and screen readers, not shown. */
+.md-typeset .ocf-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* Home page hero. */
+.ocf-hero {
+  margin: 0.5rem 0 1.5rem;
+}
+
+.ocf-hero img {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+}
+
+/* Tier badges. */
+.ocf-tier {
+  display: inline-block;
+  padding: 0 0.45em;
+  border-radius: 0.3em;
+  font-size: 0.85em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ocf-tier--supported {
+  background: rgba(16, 185, 129, 0.16);
+  color: #047857;
+}
+
+.ocf-tier--limited {
+  background: rgba(245, 158, 11, 0.18);
+  color: #92400E;
+}
+
+.ocf-tier--experimental {
+  background: rgba(107, 114, 128, 0.18);
+  color: var(--ocf-graphite);
+}
+
+[data-md-color-scheme="slate"] .ocf-tier--supported { color: var(--ocf-emerald-light); }
+[data-md-color-scheme="slate"] .ocf-tier--limited { color: #FBBF24; }
+[data-md-color-scheme="slate"] .ocf-tier--experimental { color: #D1D5DB; }
+
+/* Wide tables scroll inside their own box rather than the page. */
+.md-typeset table:not([class]) {
+  font-size: 0.68rem;
+}
+
+/* Find a company */
+.ocf-find input[type="search"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 6px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+.ocf-find input[type="search"]:focus {
+  outline: 2px solid var(--md-accent-fg-color);
+  border-color: transparent;
+}
+.ocf-find-status, .ocf-find-sources {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+}
+.md-typeset ol.ocf-find-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.md-typeset ol.ocf-find-results li {
+  margin: 0 0 0.6rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+}
+.ocf-find-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+.ocf-find-market, .ocf-find-ids {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+}
+.ocf-find-tier {
+  margin-left: auto;
+  font-size: 0.65rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+}
+.ocf-find-tier--supported { color: var(--md-accent-fg-color); }
+.ocf-find-tier--limited, .ocf-find-tier--experimental { color: #B45309; }
+.ocf-find-call {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.35rem;
+  overflow-x: auto;
+}
+.ocf-find-copy {
+  flex: none;
+  font-size: 0.68rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  cursor: pointer;
+  color: var(--md-default-fg-color);
+}
+.ocf-find-uk {
+  font-size: 0.75rem;
+}
+.ocf-find-call code {
+  white-space: nowrap;
+}

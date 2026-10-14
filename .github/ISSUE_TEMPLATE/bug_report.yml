@@ -1,0 +1,46 @@
+name: Bug report
+description: A call returned the wrong filing, document or data, or failed.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Never paste API keys, tokens or your SEC User-Agent email.
+  - type: input
+    id: market
+    attributes:
+      label: Market route
+      description: For example US, UK, JP, FR, or AT with source="esef_index".
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: OpenCorpFilings version, Python version and OS
+      placeholder: "ocf --version; python --version"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: The shortest code or ocf command that shows the problem.
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+      description: Include the source filing ID and the regulator's URL for the filing you expected, if you know it.
+    validations:
+      required: true
+  - type: input
+    id: when
+    attributes:
+      label: When it happened
+      description: Date and time with time zone, since regulators change their sites.
+  - type: textarea
+    id: error
+    attributes:
+      label: Error message or HTTP status
+      render: text

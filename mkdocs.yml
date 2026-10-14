@@ -1,0 +1,95 @@
+site_name: OpenCorpFilings
+site_url: https://sourcestate-io.github.io/opencorpfilings/
+site_description: Find company filings with Python. Download SEC EDGAR, Companies House, EDINET, AMF and ESEF reports; extract text, tables and raw XBRL facts.
+site_author: SourceState
+repo_url: https://github.com/sourcestate-io/opencorpfilings
+repo_name: sourcestate-io/opencorpfilings
+edit_uri: ""
+copyright: OpenCorpFilings is MIT licensed. The license covers the code, not the filings it retrieves.
+
+docs_dir: docs
+exclude_docs: |
+  overrides/
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: assets/brand/opencorpfilings-icon-on-dark.svg
+  favicon: assets/brand/favicon.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      base_path: !relative $config_dir
+      check_paths: true
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Find a company: find/index.md
+  - Guide:
+      - Finding companies: guide/finding-companies.md
+      - Selecting filings: guide/selecting-filings.md
+      - Documents: guide/documents.md
+      - Text, tables and facts: guide/text-tables-facts.md
+      - Downloading a company's filings: guide/downloads.md
+      - Command line: guide/cli.md
+      - Errors: guide/errors.md
+  - Markets:
+      - markets/index.md
+      - United States (SEC): markets/us.md
+      - United Kingdom (Companies House): markets/uk.md
+      - Japan (EDINET): markets/jp.md
+      - France (Info-Financiere): markets/fr.md
+      - ESEF index: markets/esef.md
+      - Experimental routes: markets/experimental.md
+  - Concepts:
+      - Identifiers, dates and provenance: concepts/identifiers-dates-provenance.md
+  - Reference:
+      - API reference: reference/api.md
+      - Changelog: reference/changelog.md
+      - Source access and rights: reference/source-access.md
+  - Stability: stability.md
+  - Contributing: contributing.md

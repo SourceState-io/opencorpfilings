@@ -1,0 +1,21 @@
+{
+ "identifier": "00502851",
+ "market": "UK",
+ "query": {
+  "form": "annual"
+ },
+ "entity_id": "00502851",
+ "filing_id": "MzUyMjMwODYxMGFkaXF6a2N4",
+ "filing_type_raw": "AA",
+ "filing_type_normalized": "ANNUAL",
+ "period_end": "2025-12-27",
+ "filing_date": "2026-05-19",
+ "amendment": false,
+ "language": null,
+ "document_count": 1,
+ "primary_filename": "MzUyMjMwODYxMGFkaXF6a2N4.pdf",
+ "primary_role": "report",
+ "roles": {
+  "report": 1
+ }
+}

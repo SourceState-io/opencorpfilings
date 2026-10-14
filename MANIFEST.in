@@ -1,0 +1,14 @@
+include API.md
+include CHANGELOG.md
+include BENCHMARKS.md
+include CONTRIBUTING.md
+include SECURITY.md
+include CITATION.cff
+include PROVIDER_NOTES.md
+include SOURCE_ACCESS.md
+include EUROPE_SOURCES.md
+include tests/conftest.py
+recursive-include tests/fixtures *.json *.pdf *.gz
+recursive-include examples *.py *.ipynb *.md
+recursive-include scripts *.py
+recursive-include benchmarks *.py *.json

@@ -1,0 +1,848 @@
+{
+ "declared": "2026-10-08",
+ "rule": "Per route five issuers, chosen and recorded before any workflow ran: two large caps, two mid/small caps and one bank or insurer, none named in a live check of the same route in BENCHMARKS.md, README or tests. Identifiers come from the route's own entity search. Liechtenstein's source lists two issuers, so both run. The ESEF index is one adapter sampled as one issuer in each of five countries without a national route.",
+ "start": "2024-07-01",
+ "routes": [
+  {
+   "route": "US",
+   "market": "US",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "LIN",
+     "name": "Linde",
+     "class": "large"
+    },
+    {
+     "id": "DE",
+     "name": "Deere",
+     "class": "large"
+    },
+    {
+     "id": "CROX",
+     "name": "Crocs",
+     "class": "small"
+    },
+    {
+     "id": "POWL",
+     "name": "Powell Industries",
+     "class": "small"
+    },
+    {
+     "id": "PNC",
+     "name": "PNC Financial",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "UK",
+   "market": "UK",
+   "forms": [
+    "annual"
+   ],
+   "issuers": [
+    {
+     "id": "04256886",
+     "name": "Marks and Spencer Group",
+     "class": "large"
+    },
+    {
+     "id": "00023307",
+     "name": "Diageo",
+     "class": "large"
+    },
+    {
+     "id": "02670969",
+     "name": "Games Workshop Group",
+     "class": "small"
+    },
+    {
+     "id": "00502851",
+     "name": "Greggs",
+     "class": "small"
+    },
+    {
+     "id": "SC095000",
+     "name": "Lloyds Banking Group",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "KR",
+   "market": "KR",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "051910",
+     "name": "LG Chem",
+     "class": "large"
+    },
+    {
+     "id": "005380",
+     "name": "Hyundai Motor",
+     "class": "large"
+    },
+    {
+     "id": "003490",
+     "name": "Korean Air",
+     "class": "small"
+    },
+    {
+     "id": "004370",
+     "name": "Nongshim",
+     "class": "small"
+    },
+    {
+     "id": "105560",
+     "name": "KB Financial",
+     "class": "financial"
+    }
+   ],
+   "start": "2025-01-01"
+  },
+  {
+   "route": "JP",
+   "market": "JP",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "6501",
+     "name": "Hitachi",
+     "class": "large"
+    },
+    {
+     "id": "7974",
+     "name": "Nintendo",
+     "class": "large"
+    },
+    {
+     "id": "2809",
+     "name": "Kewpie",
+     "class": "small"
+    },
+    {
+     "id": "7453",
+     "name": "Ryohin Keikaku",
+     "class": "small"
+    },
+    {
+     "id": "8306",
+     "name": "Mitsubishi UFJ",
+     "class": "financial"
+    }
+   ],
+   "start": "2025-06-01"
+  },
+  {
+   "route": "FR",
+   "market": "FR",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "969500XXRPGD7HCAFA90",
+     "name": "Legrand",
+     "class": "large"
+    },
+    {
+     "id": "969500KMUQ2B6CBAF162",
+     "name": "Danone",
+     "class": "large"
+    },
+    {
+     "id": "96950091FL62XSLPHO35",
+     "name": "Fnac Darty",
+     "class": "small"
+    },
+    {
+     "id": "9695000KWQEBUDT6IO19",
+     "name": "Lectra",
+     "class": "small"
+    },
+    {
+     "id": "R0MUWSFPU8MPRO8K5P83",
+     "name": "BNP Paribas",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "FI",
+   "market": "FI",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "537",
+     "name": "Kesko",
+     "class": "large"
+    },
+    {
+     "id": "1099",
+     "name": "UPM-Kymmene",
+     "class": "large"
+    },
+    {
+     "id": "622",
+     "name": "Marimekko",
+     "class": "small"
+    },
+    {
+     "id": "4773",
+     "name": "Harvia",
+     "class": "small"
+    },
+    {
+     "id": "865",
+     "name": "Sampo",
+     "class": "financial"
+    }
+   ],
+   "host": "nasdaq_oam"
+  },
+  {
+   "route": "ES",
+   "market": "ES",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "A78374725",
+     "name": "Repsol",
+     "class": "large"
+    },
+    {
+     "id": "A28015865",
+     "name": "Telefonica",
+     "class": "large"
+    },
+    {
+     "id": "A01004324",
+     "name": "Vidrala",
+     "class": "small"
+    },
+    {
+     "id": "A47412333",
+     "name": "Ebro Foods",
+     "class": "small"
+    },
+    {
+     "id": "A28157360",
+     "name": "Bankinter",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "SE",
+   "market": "SE",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "556000-3468",
+     "name": "Sandvik",
+     "class": "large"
+    },
+    {
+     "id": "556325-5511",
+     "name": "Essity",
+     "class": "large"
+    },
+    {
+     "id": "556035-8672",
+     "name": "Clas Ohlson",
+     "class": "small"
+    },
+    {
+     "id": "556770-6311",
+     "name": "Thule Group",
+     "class": "small"
+    },
+    {
+     "id": "502017-7753",
+     "name": "Swedbank",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "PL",
+   "market": "PL",
+   "forms": [
+    "annual"
+   ],
+   "issuers": [
+    {
+     "id": "ORLEN SPÓŁKA AKCYJNA",
+     "name": "ORLEN",
+     "class": "large"
+    },
+    {
+     "id": "KGHM POLSKA MIEDŹ SPÓŁKA AKCYJNA",
+     "name": "KGHM",
+     "class": "large"
+    },
+    {
+     "id": "AMICA WRONKI SA",
+     "name": "Amica",
+     "class": "small"
+    },
+    {
+     "id": "Budimex SA",
+     "name": "Budimex",
+     "class": "small"
+    },
+    {
+     "id": "POWSZECHNA KASA OSZCZĘDNOŚCI BANK POLSKI SA",
+     "name": "PKO Bank Polski",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "IS",
+   "market": "IS",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "1692",
+     "name": "Icelandair Group",
+     "class": "large"
+    },
+    {
+     "id": "1848",
+     "name": "Festi",
+     "class": "large"
+    },
+    {
+     "id": "1826",
+     "name": "Hagar",
+     "class": "small"
+    },
+    {
+     "id": "3285",
+     "name": "Sjova-Almennar",
+     "class": "financial"
+    },
+    {
+     "id": "2782",
+     "name": "Arion Bank",
+     "class": "financial"
+    }
+   ],
+   "host": "nasdaq_oam"
+  },
+  {
+   "route": "LT",
+   "market": "LT",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "4358",
+     "name": "Ignitis grupe",
+     "class": "large"
+    },
+    {
+     "id": "1052",
+     "name": "Telia Lietuva",
+     "class": "large"
+    },
+    {
+     "id": "840",
+     "name": "Rokiskio Suris",
+     "class": "small"
+    },
+    {
+     "id": "4778",
+     "name": "Novaturas",
+     "class": "small"
+    },
+    {
+     "id": "906",
+     "name": "Artea Bankas",
+     "class": "financial"
+    }
+   ],
+   "host": "nasdaq_oam"
+  },
+  {
+   "route": "RO",
+   "market": "RO",
+   "forms": [
+    "annual"
+   ],
+   "issuers": [
+    {
+     "id": "OAM:786",
+     "name": "Romgaz",
+     "class": "large"
+    },
+    {
+     "id": "OAM:214",
+     "name": "Transgaz",
+     "class": "large"
+    },
+    {
+     "id": "OAM:821",
+     "name": "Electrica",
+     "class": "small"
+    },
+    {
+     "id": "OAM:441",
+     "name": "Bursa de Valori Bucuresti",
+     "class": "small"
+    },
+    {
+     "id": "OAM:206",
+     "name": "Banca Transilvania",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "LV",
+   "market": "LV",
+   "forms": [
+    "annual"
+   ],
+   "issuers": [
+    {
+     "id": "Latvenergo, AS",
+     "name": "Latvenergo",
+     "class": "large"
+    },
+    {
+     "id": "Grindeks, AS",
+     "name": "Grindeks",
+     "class": "large"
+    },
+    {
+     "id": "Olainfarm, AS",
+     "name": "Olainfarm",
+     "class": "small"
+    },
+    {
+     "id": "SAF Tehnika, AS",
+     "name": "SAF Tehnika",
+     "class": "small"
+    },
+    {
+     "id": "Citadele banka, AS",
+     "name": "Citadele banka",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "HR",
+   "market": "HR",
+   "forms": [
+    "annual"
+   ],
+   "issuers": [
+    {
+     "id": "1627",
+     "name": "Podravka",
+     "class": "large"
+    },
+    {
+     "id": "273",
+     "name": "Hrvatski Telekom",
+     "class": "large"
+    },
+    {
+     "id": "2588",
+     "name": "Atlantic Grupa",
+     "class": "small"
+    },
+    {
+     "id": "501",
+     "name": "Koncar - Elektroindustrija",
+     "class": "small"
+    },
+    {
+     "id": "307",
+     "name": "Zagrebacka banka",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "NL",
+   "market": "NL",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "Wolters Kluwer N.V.",
+     "name": "Wolters Kluwer",
+     "class": "large"
+    },
+    {
+     "id": "Akzo Nobel N.V.",
+     "name": "Akzo Nobel",
+     "class": "large"
+    },
+    {
+     "id": "Fugro N.V.",
+     "name": "Fugro",
+     "class": "small"
+    },
+    {
+     "id": "Sligro Food Group N.V.",
+     "name": "Sligro",
+     "class": "small"
+    },
+    {
+     "id": "NN Group N.V.",
+     "name": "NN Group",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "DK",
+   "market": "DK",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "DK-58233528",
+     "name": "DSV",
+     "class": "large"
+    },
+    {
+     "id": "DK-69749917",
+     "name": "Coloplast",
+     "class": "large"
+    },
+    {
+     "id": "DK-27528406",
+     "name": "Matas",
+     "class": "small"
+    },
+    {
+     "id": "DK-13228345",
+     "name": "Columbus",
+     "class": "small"
+    },
+    {
+     "id": "DK-61126228",
+     "name": "Danske Bank",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "SK",
+   "market": "SK",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "315700YHD1JR6VB1BA90",
+     "name": "Tatry mountain resorts",
+     "class": "large"
+    },
+    {
+     "id": "549300JB1P61FUTPEZ75",
+     "name": "Vseobecna uverova banka",
+     "class": "financial"
+    },
+    {
+     "id": "097900BFM30000040096",
+     "name": "GEVORKYAN",
+     "class": "small"
+    },
+    {
+     "id": "2138009HNJSVYWDD1O28",
+     "name": "Eurovea",
+     "class": "small"
+    },
+    {
+     "id": "3157002JBFAI478MD587",
+     "name": "Tatra banka",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "EE",
+   "market": "EE",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "10",
+     "name": "Tallink Grupp",
+     "class": "large"
+    },
+    {
+     "id": "55",
+     "name": "Tallinna Sadam",
+     "class": "large"
+    },
+    {
+     "id": "49",
+     "name": "Harju Elekter",
+     "class": "small"
+    },
+    {
+     "id": "64",
+     "name": "Merko Ehitus",
+     "class": "small"
+    },
+    {
+     "id": "83",
+     "name": "Coop Pank",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "MT",
+   "market": "MT",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "MIA",
+     "name": "Malta International Airport",
+     "class": "large"
+    },
+    {
+     "id": "GO",
+     "name": "GO plc",
+     "class": "large"
+    },
+    {
+     "id": "SFC",
+     "name": "Simonds Farsons Cisk",
+     "class": "small"
+    },
+    {
+     "id": "MDS",
+     "name": "MedservRegis",
+     "class": "small"
+    },
+    {
+     "id": "APSB",
+     "name": "APS Bank",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "CY",
+   "market": "CY",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "1822",
+     "name": "Bank of Cyprus Holdings",
+     "class": "financial"
+    },
+    {
+     "id": "1671",
+     "name": "Petrolina",
+     "class": "large"
+    },
+    {
+     "id": "1646",
+     "name": "Demetra Holdings",
+     "class": "small"
+    },
+    {
+     "id": "1605",
+     "name": "Cyprus Cement",
+     "class": "small"
+    },
+    {
+     "id": "1661",
+     "name": "Atlantic Insurance",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "HU",
+   "market": "HU",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "MOL Magyar Olaj- és Gázipari Nyilvánosan Működő Részvénytársaság",
+     "name": "MOL",
+     "class": "large"
+    },
+    {
+     "id": "Richter Gedeon Vegyészeti Gyár Nyilvánosan Működő Rt.",
+     "name": "Richter Gedeon",
+     "class": "large"
+    },
+    {
+     "id": "Magyar Telekom Távközlési Nyilvánosan Működő Részvénytársaság",
+     "name": "Magyar Telekom",
+     "class": "large"
+    },
+    {
+     "id": "MASTERPLAST Nyilvánosan működő Részvénytársaság",
+     "name": "Masterplast",
+     "class": "small"
+    },
+    {
+     "id": "GRÁNIT Bank Nyilvánosan Működő Részvénytársaság",
+     "name": "Granit Bank",
+     "class": "financial"
+    }
+   ]
+  },
+  {
+   "route": "LI",
+   "market": "LI",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "5afde5bf-a8ef-eb11-8126-005056ab0b01",
+     "name": "DDA ETP AG",
+     "class": "small"
+    },
+    {
+     "id": "d99d7a37-9e2d-eb11-811d-005056ab0b01",
+     "name": "VanEck ETP AG",
+     "class": "small"
+    }
+   ],
+   "start": null
+  },
+  {
+   "route": "ESEF-IT",
+   "market": "IT",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "WOCMU6HCI0OJWNPRZS33",
+     "name": "Enel",
+     "class": "large"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-NO",
+   "market": "NO",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "OW6OFBNCKXC4US5C7523",
+     "name": "Equinor",
+     "class": "large"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-AT",
+   "market": "AT",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "5299006UDSEJCTTEJS30",
+     "name": "Verbund",
+     "class": "large"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-PT",
+   "market": "PT",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "2138003319Y7NM75FG53",
+     "name": "Galp Energia SGPS",
+     "class": "large"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-LU",
+   "market": "LU",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "2EULGUTUI56JI9SAL165",
+     "name": "ArcelorMittal",
+     "class": "large"
+    }
+   ]
+  }
+ ]
+}

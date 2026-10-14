@@ -1,0 +1,12 @@
+{
+ "GET https://filings.xbrl.org/api/entities/5299006UDSEJCTTEJS30/filings?page%5Bnumber%5D=1&page%5Bsize%5D=100&sort=-date_added": {
+  "content_type": "application/vnd.api+json",
+  "file": "001.bin.gz",
+  "status": 200
+ },
+ "GET https://filings.xbrl.org/api/entities/5299006UDSEJCTTEJS30?": {
+  "content_type": "application/vnd.api+json",
+  "file": "000.bin.gz",
+  "status": 200
+ }
+}

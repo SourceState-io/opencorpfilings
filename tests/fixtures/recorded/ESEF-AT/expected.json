@@ -1,0 +1,22 @@
+{
+ "identifier": "5299006UDSEJCTTEJS30",
+ "market": "AT",
+ "query": {
+  "form": "annual"
+ },
+ "entity_id": "5299006UDSEJCTTEJS30",
+ "filing_id": "24793",
+ "filing_type_raw": "ESEF",
+ "filing_type_normalized": "ANNUAL",
+ "period_end": "2025-12-31",
+ "filing_date": null,
+ "amendment": null,
+ "language": "en",
+ "document_count": 3,
+ "primary_filename": "verbundag-2025-12-31-1-en.xhtml",
+ "primary_role": "report",
+ "roles": {
+  "data": 1,
+  "report": 2
+ }
+}

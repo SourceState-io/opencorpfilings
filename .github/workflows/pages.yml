@@ -1,0 +1,45 @@
+# Publishes the docs site, with a freshly built "Find a company" list, to GitHub Pages.
+# GitHub Pages is free only for a public repository, so this does nothing while the
+# repository is private. At launch: Settings -> Pages -> Source: GitHub Actions, and add the
+# repository secret OPENCORPFILINGS_SEC_USER_AGENT ("Name contact@example.com") that the
+# SEC list requires.
+name: docs site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 5 * * 1"  # weekly, so the company list stays current
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: ${{ !github.event.repository.private }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: python -m pip install . "mkdocs-material==9.7.7"
+      - run: python scripts/build_find_index.py docs/find/companies.json
+        env:
+          OPENCORPFILINGS_SEC_USER_AGENT: ${{ secrets.OPENCORPFILINGS_SEC_USER_AGENT }}
+      - run: mkdocs build --strict -d site
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

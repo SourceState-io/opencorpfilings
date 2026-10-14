@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use OpenCorpFilings in research, please cite it as below."
+type: software
+title: "OpenCorpFilings: public company filings worldwide, one Python API"
+abstract: >-
+  A Python library that discovers public-company filings at the regulators that
+  hold them (SEC EDGAR, UK Companies House, Japan's EDINET, France's AMF/DILA
+  service and the ESEF index) and retrieves the original documents with their
+  source identifiers, dates and URLs.
+authors:
+  - name: SourceState
+version: 1.0.2
+date-released: 2026-10-11
+license: MIT
+repository-code: "https://github.com/sourcestate-io/opencorpfilings"
+keywords:
+  - corporate filings
+  - annual reports
+  - SEC EDGAR
+  - EDINET
+  - Companies House
+  - ESEF
+  - XBRL
+  - provenance

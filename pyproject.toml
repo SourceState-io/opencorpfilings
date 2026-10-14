@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opencorpfilings"
+dynamic = ["version"]
+description = "Global company filings in Python: SEC EDGAR, Companies House, EDINET, AMF/DILA, ESEF and more to come. Original financial statements, documents, text, tables and raw XBRL/iXBRL facts."
+keywords = ["company-filings", "sec-edgar", "edinet", "companies-house", "amf", "esef", "xbrl", "ixbrl", "annual-reports", "regulatory-filings", "financial-data"]
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "SourceState"}]
+dependencies = ["httpx>=0.27,<1", "beautifulsoup4>=4.12,<5", "tzdata; sys_platform == 'win32'"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Operating System :: OS Independent",
+  "Topic :: Office/Business :: Financial",
+  "Typing :: Typed",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Documentation = "https://sourcestate-io.github.io/opencorpfilings/"
+Repository = "https://github.com/sourcestate-io/opencorpfilings"
+Issues = "https://github.com/sourcestate-io/opencorpfilings/issues"
+Changelog = "https://github.com/sourcestate-io/opencorpfilings/blob/main/CHANGELOG.md"
+
+[project.scripts]
+ocf = "opencorpfilings.cli:main"
+
+[project.optional-dependencies]
+pdf = ["pypdf>=6,<7"]
+markdown = ["markdownify>=1.2,<2"]
+pandas = ["pandas>=2,<4"]
+dev = ["pytest>=8", "build>=1.2", "pypdf>=6,<7", "markdownify>=1.2,<2", "pandas>=2,<4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "opencorpfilings._version.__version__"}
+
+[tool.setuptools.package-data]
+opencorpfilings = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Tests open experimental routes on purpose; test_route_profiles checks the warning itself.
+filterwarnings = ["ignore::opencorpfilings.errors.ExperimentalRouteWarning"]

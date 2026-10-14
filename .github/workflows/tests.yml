@@ -1,0 +1,52 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install '.[dev]'
+      - run: python -m pytest tests -q
+      - run: python -m build --sdist --wheel
+      - run: python scripts/check_distribution.py dist
+
+  base-install:
+    # The base install has no extras; pandas pulls in tzdata, which once hid a
+    # Windows import failure of the JP route.
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: python -m pip install .
+      - run: python -c "from opencorpfilings import provider_info, supported_markets; [provider_info(m) for m in supported_markets()]"
+      - run: ocf markets
+
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: python -m pip install "mkdocs-material==9.7.7"
+      - run: mkdocs build --strict -d "$RUNNER_TEMP/site"

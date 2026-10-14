@@ -1,0 +1,17 @@
+/build/
+/dist/
+/src/*.egg-info/
+/.smoke-install/
+__pycache__/
+.pytest_cache/
+.env
+.env.*
+
+# Notebook example downloads
+examples/notebooks/downloads/
+
+# mkdocs build output
+/site/
+
+# built by scripts/build_find_index.py at deploy time
+docs/find/companies.json

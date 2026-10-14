@@ -1,0 +1,1020 @@
+{
+  "source": "https://filings.xbrl.org/api",
+  "captured_at_utc": "2026-10-08T03:53:33.605237+00:00",
+  "samples": [
+    {
+      "country": "AT",
+      "lei": "529900PD3SI453KAW989",
+      "name": "Kapsch TrafficCom AG",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "529900PD3SI453KAW989-2026-03-31-ESEF-AT-0",
+          "error_count": 0,
+          "processed": "2026-08-04 16:48:35.245129",
+          "viewer_url": "/529900PD3SI453KAW989/2026-03-31/ESEF/AT/0/529900PD3SI453KAW989-2026-03-31-1-de/reports/ixbrlviewer.html",
+          "sha256": "15e50b32aa64ae00d0ee93ede83d178f6de9e549dd1ad20b9be4fa4ee1b16b18",
+          "json_url": "/529900PD3SI453KAW989/2026-03-31/ESEF/AT/0/529900PD3SI453KAW989-2026-03-31-1-de.json",
+          "date_added": "2026-08-04 16:42:36.542606",
+          "country": "AT",
+          "warning_count": 2,
+          "inconsistency_count": 0,
+          "period_end": "2026-03-31",
+          "report_url": "/529900PD3SI453KAW989/2026-03-31/ESEF/AT/0/529900PD3SI453KAW989-2026-03-31-1-de/reports/529900PD3SI453KAW989-2026-03-31-1-de.xhtml",
+          "package_url": "/529900PD3SI453KAW989/2026-03-31/ESEF/AT/0/529900PD3SI453KAW989-2026-03-31.xbri"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/529900PD3SI453KAW989"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/25831/validation_messages"
+            }
+          }
+        },
+        "id": "25831",
+        "links": {
+          "self": "/api/filings/25831"
+        }
+      }
+    },
+    {
+      "country": "BE",
+      "lei": "5493000O0NZ1BCXO8K39",
+      "name": "Colruyt Group",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "5493000O0NZ1BCXO8K39-2026-03-31-ESEF-BE-2",
+          "error_count": 0,
+          "processed": "2026-08-04 16:47:46.024805",
+          "viewer_url": "/5493000O0NZ1BCXO8K39/2026-03-31/ESEF/BE/2/5493000O0NZ1BCXO8K39-2026-03-31-1-en/reports/ixbrlviewer.html",
+          "sha256": "dfafd0da93f67463029cf4d0aaba25554ecad8b5231f7b2d24e558bd5fe6d924",
+          "json_url": "/5493000O0NZ1BCXO8K39/2026-03-31/ESEF/BE/2/5493000O0NZ1BCXO8K39-2026-03-31-1-en.json",
+          "date_added": "2026-08-04 16:42:29.550339",
+          "country": "BE",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2026-03-31",
+          "report_url": "/5493000O0NZ1BCXO8K39/2026-03-31/ESEF/BE/2/5493000O0NZ1BCXO8K39-2026-03-31-1-en/reports/5493000O0NZ1BCXO8K39-2026-03-31-1-en.xhtml",
+          "package_url": "/5493000O0NZ1BCXO8K39/2026-03-31/ESEF/BE/2/5493000O0NZ1BCXO8K39-2026-03-31.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/5493000O0NZ1BCXO8K39"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/25830/validation_messages"
+            }
+          }
+        },
+        "id": "25830",
+        "links": {
+          "self": "/api/filings/25830"
+        }
+      }
+    },
+    {
+      "country": "CY",
+      "lei": "213800BYCUHXLRDEA130",
+      "name": "VASSILIKO CEMENT WORKS PUBLIC COMPANY LIMITED",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "213800BYCUHXLRDEA130-2022-12-31-ESEF-CY-0",
+          "error_count": 0,
+          "processed": "2023-05-30 16:12:52.755201",
+          "viewer_url": "/213800BYCUHXLRDEA130/2022-12-31/ESEF/CY/0/213800BYCUHXLRDEA130-2022-12-31-el/reports/ixbrlviewer.html",
+          "sha256": "ac1930a2b42d1ccde144bb0938abb27efdc4502aa0bc62877fbb26746ed360b9",
+          "json_url": "/213800BYCUHXLRDEA130/2022-12-31/ESEF/CY/0/213800BYCUHXLRDEA130-2022-12-31-el.json",
+          "date_added": "2023-05-30 11:13:47.866371",
+          "country": "CY",
+          "warning_count": 4,
+          "inconsistency_count": 0,
+          "period_end": "2022-12-31",
+          "report_url": "/213800BYCUHXLRDEA130/2022-12-31/ESEF/CY/0/213800BYCUHXLRDEA130-2022-12-31-el/reports/213800BYCUHXLRDEA130-2022-12-31-el.xhtml",
+          "package_url": "/213800BYCUHXLRDEA130/2022-12-31/ESEF/CY/0/213800BYCUHXLRDEA130-2022-12-31-el.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/213800BYCUHXLRDEA130"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/6834/validation_messages"
+            }
+          }
+        },
+        "id": "6834",
+        "links": {
+          "self": "/api/filings/6834"
+        }
+      }
+    },
+    {
+      "country": "CZ",
+      "lei": "31570010000000004460",
+      "name": "Raiffeisenbank a.s.",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "31570010000000004460-2020-12-31-ESEF-CZ-0",
+          "error_count": 1,
+          "processed": "2023-01-18 11:02:13.611781",
+          "viewer_url": null,
+          "sha256": "0bd377ba775c4b927cc2e18784157678f8443f08253c1b994ab56c87be91be52",
+          "json_url": null,
+          "date_added": "2021-05-20 00:00:00",
+          "country": "CZ",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2020-12-31",
+          "report_url": null,
+          "package_url": "/31570010000000004460/2020-12-31/ESEF/CZ/0/31570010000000004460-2020-12-31.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/31570010000000004460"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/441/validation_messages"
+            }
+          }
+        },
+        "id": "441",
+        "links": {
+          "self": "/api/filings/441"
+        }
+      }
+    },
+    {
+      "country": "DK",
+      "lei": "529900VSWLQF0O3GA946",
+      "name": "PRICEWATERHOUSECOOPERS STATSAUTORISERET REVISIONSPARTNERSELSKAB",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "529900VSWLQF0O3GA946-2026-06-30-ESEF-DK-0",
+          "error_count": 81,
+          "processed": "2026-10-06 18:13:20.220852",
+          "viewer_url": "/529900VSWLQF0O3GA946/2026-06-30/ESEF/DK/0/529900VSWLQF0O3GA946-2026-06-30-da/reports/ixbrlviewer.html",
+          "sha256": "228c1f8d03a71ee388bd01cebe84e471cb255b0701d01a347c099f1b849ca618",
+          "json_url": "/529900VSWLQF0O3GA946/2026-06-30/ESEF/DK/0/529900VSWLQF0O3GA946-2026-06-30-da.json",
+          "date_added": "2026-10-06 16:00:09.959001",
+          "country": "DK",
+          "warning_count": 2,
+          "inconsistency_count": 0,
+          "period_end": "2026-06-30",
+          "report_url": "/529900VSWLQF0O3GA946/2026-06-30/ESEF/DK/0/529900VSWLQF0O3GA946-2026-06-30-da/reports/529900VSWLQF0O3GA946-2026-06-30-da.xhtml",
+          "package_url": "/529900VSWLQF0O3GA946/2026-06-30/ESEF/DK/0/529900VSWLQF0O3GA946-2026-06-30.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/529900VSWLQF0O3GA946"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/26155/validation_messages"
+            }
+          }
+        },
+        "id": "26155",
+        "links": {
+          "self": "/api/filings/26155"
+        }
+      }
+    },
+    {
+      "country": "EE",
+      "lei": "25490093MDYISEP1Y539",
+      "name": "aktsiaselts TALLINNA SADAM",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "25490093MDYISEP1Y539-2024-12-31-ESEF-EE-0",
+          "error_count": 0,
+          "processed": "2025-05-21 15:14:43.369794",
+          "viewer_url": "/25490093MDYISEP1Y539/2024-12-31/ESEF/EE/0/25490093MDYISEP1Y539-2024-12-31-0-en/reports/ixbrlviewer.html",
+          "sha256": "d25895bd9192e5575e437e04619e52a1ca94eea0d759c2e597bf39de5f8bd180",
+          "json_url": "/25490093MDYISEP1Y539/2024-12-31/ESEF/EE/0/25490093MDYISEP1Y539-2024-12-31-0-en.json",
+          "date_added": "2025-05-21 14:33:41.664485",
+          "country": "EE",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2024-12-31",
+          "report_url": "/25490093MDYISEP1Y539/2024-12-31/ESEF/EE/0/25490093MDYISEP1Y539-2024-12-31-0-en/reports/25490093MDYISEP1Y539-2024-12-31-0-en.xhtml",
+          "package_url": "/25490093MDYISEP1Y539/2024-12-31/ESEF/EE/0/25490093MDYISEP1Y539-2024-12-31-0-en.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/25490093MDYISEP1Y539"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/19521/validation_messages"
+            }
+          }
+        },
+        "id": "19521",
+        "links": {
+          "self": "/api/filings/19521"
+        }
+      }
+    },
+    {
+      "country": "ES",
+      "lei": "95980020140005491250",
+      "name": "ELECNOR SA",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "95980020140005491250-2024-12-31-ESEF-ES-0",
+          "error_count": 0,
+          "processed": "2025-05-10 03:27:50.602552",
+          "viewer_url": "/95980020140005491250/2024-12-31/ESEF/ES/0/95980020140005491250-20241231-es/reports/ixbrlviewer.html",
+          "sha256": "b95ced906ef1d6104e9841aee2631a0fcbdb448b523cddf2c630e602d41d9c65",
+          "json_url": "/95980020140005491250/2024-12-31/ESEF/ES/0/95980020140005491250-20241231-es.json",
+          "date_added": "2025-05-08 11:24:58.730825",
+          "country": "ES",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2024-12-31",
+          "report_url": "/95980020140005491250/2024-12-31/ESEF/ES/0/95980020140005491250-20241231-es/reports/95980020140005491250-20241231-es.xhtml",
+          "package_url": "/95980020140005491250/2024-12-31/ESEF/ES/0/95980020140005491250-20241231-es.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/95980020140005491250"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/18863/validation_messages"
+            }
+          }
+        },
+        "id": "18863",
+        "links": {
+          "self": "/api/filings/18863"
+        }
+      }
+    },
+    {
+      "country": "FI",
+      "lei": "743700WUIPC24LVMLO66",
+      "name": "Nightingale Health Oyj",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "743700WUIPC24LVMLO66-2026-06-30-ESEF-FI-0",
+          "error_count": 0,
+          "processed": "2026-10-06 18:13:02.171670",
+          "viewer_url": "/743700WUIPC24LVMLO66/2026-06-30/ESEF/FI/0/743700WUIPC24LVMLO66-2026-06-30-1-fi/reports/ixbrlviewer.html",
+          "sha256": "60f817b78067d07a5daea3e5129b9788e60e6443b0c30240aea9ca8c068f94c6",
+          "json_url": "/743700WUIPC24LVMLO66/2026-06-30/ESEF/FI/0/743700WUIPC24LVMLO66-2026-06-30-1-fi.json",
+          "date_added": "2026-10-06 16:00:01.331162",
+          "country": "FI",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2026-06-30",
+          "report_url": "/743700WUIPC24LVMLO66/2026-06-30/ESEF/FI/0/743700WUIPC24LVMLO66-2026-06-30-1-fi/reports/743700WUIPC24LVMLO66-2026-06-30-1-fi.xhtml",
+          "package_url": "/743700WUIPC24LVMLO66/2026-06-30/ESEF/FI/0/743700WUIPC24LVMLO66-2026-06-30.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/743700WUIPC24LVMLO66"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/26154/validation_messages"
+            }
+          }
+        },
+        "id": "26154",
+        "links": {
+          "self": "/api/filings/26154"
+        }
+      }
+    },
+    {
+      "country": "FR",
+      "lei": "969500M5EQJVDASURW53",
+      "name": "MAISON POMMERY & ASSOCIES",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "969500M5EQJVDASURW53-2025-12-31-ESEF-FR-0",
+          "error_count": 3,
+          "processed": "2026-09-08 13:36:43.144278",
+          "viewer_url": "/969500M5EQJVDASURW53/2025-12-31/ESEF/FR/0/vrankenpommery-2025-12-31-1-fr/reports/ixbrlviewer.html",
+          "sha256": "fbc95bd6a8c27ac26a49a807005d2af4c5a4ad78ef1a7c41107cff7b4513548b",
+          "json_url": "/969500M5EQJVDASURW53/2025-12-31/ESEF/FR/0/vrankenpommery-2025-12-31-1-fr.json",
+          "date_added": "2026-09-08 12:46:03.257806",
+          "country": "FR",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2025-12-31",
+          "report_url": "/969500M5EQJVDASURW53/2025-12-31/ESEF/FR/0/vrankenpommery-2025-12-31-1-fr/reports/vrankenpommery-2025-12-31-1-fr.xhtml",
+          "package_url": "/969500M5EQJVDASURW53/2025-12-31/ESEF/FR/0/969500M5EQJVDASURW53-2025-12-31.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/969500M5EQJVDASURW53"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/26089/validation_messages"
+            }
+          }
+        },
+        "id": "26089",
+        "links": {
+          "self": "/api/filings/26089"
+        }
+      }
+    },
+    {
+      "country": "GR",
+      "lei": "213800NW1S2T9JRVU437",
+      "name": "A.S. ΕΜΠΟΡΙΚΗ-ΒΙΟΜΗΧΑΝΙΚΗ ΕΤΑΙΡΙΑ Η/Υ & ΠΑΙΧΝΙΔΙΩΝ Α.Ε.",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "213800NW1S2T9JRVU437-2024-12-31-ESEF-GR-0",
+          "error_count": 0,
+          "processed": "2025-05-21 16:52:47.550020",
+          "viewer_url": "/213800NW1S2T9JRVU437/2024-12-31/ESEF/GR/0/213800NW1S2T9JRVU437-2024-12-31-en/reports/ixbrlviewer.html",
+          "sha256": "be10cc66d7262f5d5c899eb14d152fbf0e27b138945dabcfb46fe2b89e08c201",
+          "json_url": "/213800NW1S2T9JRVU437/2024-12-31/ESEF/GR/0/213800NW1S2T9JRVU437-2024-12-31-en.json",
+          "date_added": "2025-05-21 16:39:08.028501",
+          "country": "GR",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2024-12-31",
+          "report_url": "/213800NW1S2T9JRVU437/2024-12-31/ESEF/GR/0/213800NW1S2T9JRVU437-2024-12-31-en/reports/213800NW1S2T9JRVU437-2024-12-31-en.xhtml",
+          "package_url": "/213800NW1S2T9JRVU437/2024-12-31/ESEF/GR/0/213800NW1S2T9JRVU437-2024-12-31-en.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/213800NW1S2T9JRVU437"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/19587/validation_messages"
+            }
+          }
+        },
+        "id": "19587",
+        "links": {
+          "self": "/api/filings/19587"
+        }
+      }
+    },
+    {
+      "country": "HR",
+      "lei": "3157002G3ENYCZEB1A25",
+      "name": "ATLANTIC GRUPA dioničko društvo za unutarnju i vanjsku trgovinu",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "3157002G3ENYCZEB1A25-2024-12-31-ESEF-HR-1",
+          "error_count": 0,
+          "processed": "2025-05-21 15:13:50.727731",
+          "viewer_url": "/3157002G3ENYCZEB1A25/2024-12-31/ESEF/HR/1/3157002G3ENYCZEB1A25-2024-12-31-0-en/reports/ixbrlviewer.html",
+          "sha256": "572c1727f71b5fc76a29852ee3cef52afaf7071f37f7e98e5acb922d19fad492",
+          "json_url": "/3157002G3ENYCZEB1A25/2024-12-31/ESEF/HR/1/3157002G3ENYCZEB1A25-2024-12-31-0-en.json",
+          "date_added": "2025-05-21 14:33:36.022449",
+          "country": "HR",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2024-12-31",
+          "report_url": "/3157002G3ENYCZEB1A25/2024-12-31/ESEF/HR/1/3157002G3ENYCZEB1A25-2024-12-31-0-en/reports/3157002G3ENYCZEB1A25-2024-12-31-0-en.xhtml",
+          "package_url": "/3157002G3ENYCZEB1A25/2024-12-31/ESEF/HR/1/3157002G3ENYCZEB1A25-2024-12-31-0-en.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/3157002G3ENYCZEB1A25"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/19518/validation_messages"
+            }
+          }
+        },
+        "id": "19518",
+        "links": {
+          "self": "/api/filings/19518"
+        }
+      }
+    },
+    {
+      "country": "HU",
+      "lei": "529900VUFNK4NMC6YJ22",
+      "name": "SunDell Estate Nyilvánosan Működő Részvénytársaság",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "529900VUFNK4NMC6YJ22-2024-12-31-ESEF-HU-0",
+          "error_count": 0,
+          "processed": "2025-05-21 15:36:03.325752",
+          "viewer_url": "/529900VUFNK4NMC6YJ22/2024-12-31/ESEF/HU/0/529900VUFNK4NMC6YJ22-2024-12-31-0-hu/reports/ixbrlviewer.html",
+          "sha256": "0c1439f8a9ce6ad80835b6530ccdb91af9b5b9954453dfc5d1ff8121b72249c3",
+          "json_url": "/529900VUFNK4NMC6YJ22/2024-12-31/ESEF/HU/0/529900VUFNK4NMC6YJ22-2024-12-31-0-hu.json",
+          "date_added": "2025-05-21 14:35:29.813957",
+          "country": "HU",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2024-12-31",
+          "report_url": "/529900VUFNK4NMC6YJ22/2024-12-31/ESEF/HU/0/529900VUFNK4NMC6YJ22-2024-12-31-0-hu/reports/529900VUFNK4NMC6YJ22-2024-12-31-0-hu.xhtml",
+          "package_url": "/529900VUFNK4NMC6YJ22/2024-12-31/ESEF/HU/0/529900VUFNK4NMC6YJ22-2024-12-31-0-hu.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/529900VUFNK4NMC6YJ22"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/19564/validation_messages"
+            }
+          }
+        },
+        "id": "19564",
+        "links": {
+          "self": "/api/filings/19564"
+        }
+      }
+    },
+    {
+      "country": "IS",
+      "lei": "635400TICHH43JJTNP54",
+      "name": "Hagar hf.",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "635400TICHH43JJTNP54-2026-02-28-ESEF-IS-0",
+          "error_count": 0,
+          "processed": "2026-05-12 12:26:14.370252",
+          "viewer_url": "/635400TICHH43JJTNP54/2026-02-28/ESEF/IS/0/635400TICHH43JJTNP54-2026-02-28-1-is/reports/ixbrlviewer.html",
+          "sha256": "9bc5fc39073861db468d474cae52eb22867db401d0ae2a9075cd904f2fb4ea48",
+          "json_url": "/635400TICHH43JJTNP54/2026-02-28/ESEF/IS/0/635400TICHH43JJTNP54-2026-02-28-1-is.json",
+          "date_added": "2026-05-12 10:43:52.225007",
+          "country": "IS",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2026-02-28",
+          "report_url": "/635400TICHH43JJTNP54/2026-02-28/ESEF/IS/0/635400TICHH43JJTNP54-2026-02-28-1-is/reports/635400TICHH43JJTNP54-2026-02-28-1-is.xhtml",
+          "package_url": "/635400TICHH43JJTNP54/2026-02-28/ESEF/IS/0/635400TICHH43JJTNP54-2026-02-28.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/635400TICHH43JJTNP54"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/24968/validation_messages"
+            }
+          }
+        },
+        "id": "24968",
+        "links": {
+          "self": "/api/filings/24968"
+        }
+      }
+    },
+    {
+      "country": "IT",
+      "lei": "815600D581F8552C4F54",
+      "name": "DIGITAL BROS S.P.A.",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "815600D581F8552C4F54-2026-06-30-ESEF-IT-0",
+          "error_count": 0,
+          "processed": "2026-10-06 18:08:04.054171",
+          "viewer_url": "/815600D581F8552C4F54/2026-06-30/ESEF/IT/0/815600D581F8552C4F54-2026-06-30-1-it/reports/ixbrlviewer.html",
+          "sha256": "916056ac1bc025432e32cb40376bf3b1a86c6089b505041483e450feb87e475e",
+          "json_url": "/815600D581F8552C4F54/2026-06-30/ESEF/IT/0/815600D581F8552C4F54-2026-06-30-1-it.json",
+          "date_added": "2026-10-06 16:00:14.971765",
+          "country": "IT",
+          "warning_count": 4,
+          "inconsistency_count": 0,
+          "period_end": "2026-06-30",
+          "report_url": "/815600D581F8552C4F54/2026-06-30/ESEF/IT/0/815600D581F8552C4F54-2026-06-30-1-it/reports/815600D581F8552C4F54-2026-06-30-1-it.xhtml",
+          "package_url": "/815600D581F8552C4F54/2026-06-30/ESEF/IT/0/815600D581F8552C4F54-2026-06-30.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/815600D581F8552C4F54"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/26156/validation_messages"
+            }
+          }
+        },
+        "id": "26156",
+        "links": {
+          "self": "/api/filings/26156"
+        }
+      }
+    },
+    {
+      "country": "LT",
+      "lei": "48510000P2S3LHJPX414",
+      "name": "AUGA group, AB",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "48510000P2S3LHJPX414-2025-12-31-ESEF-LT-0",
+          "error_count": 0,
+          "processed": "2026-05-12 12:26:47.793150",
+          "viewer_url": "/48510000P2S3LHJPX414/2025-12-31/ESEF/LT/0/48510000P2S3LHJPX414-2025-12-31-0-en/reports/ixbrlviewer.html",
+          "sha256": "60de069efb4b96014004066b02a2fc891e1e127bff236a3c9436972562c6e848",
+          "json_url": "/48510000P2S3LHJPX414/2025-12-31/ESEF/LT/0/48510000P2S3LHJPX414-2025-12-31-0-en.json",
+          "date_added": "2026-05-12 10:43:55.222840",
+          "country": "LT",
+          "warning_count": 2,
+          "inconsistency_count": 0,
+          "period_end": "2025-12-31",
+          "report_url": "/48510000P2S3LHJPX414/2025-12-31/ESEF/LT/0/48510000P2S3LHJPX414-2025-12-31-0-en/reports/48510000P2S3LHJPX414-2025-12-31-0-en.xhtml",
+          "package_url": "/48510000P2S3LHJPX414/2025-12-31/ESEF/LT/0/48510000P2S3LHJPX414-2025-12-31.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/48510000P2S3LHJPX414"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/24970/validation_messages"
+            }
+          }
+        },
+        "id": "24970",
+        "links": {
+          "self": "/api/filings/24970"
+        }
+      }
+    },
+    {
+      "country": "LU",
+      "lei": "222100DCZBOWV5DZ8372",
+      "name": "ALVOTECH",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "222100DCZBOWV5DZ8372-2024-12-31-ESEF-LU-0",
+          "error_count": 0,
+          "processed": "2025-05-21 16:51:06.511903",
+          "viewer_url": "/222100DCZBOWV5DZ8372/2024-12-31/ESEF/LU/0/222100DCZBOWV5DZ8372-2024-12-31-en/reports/ixbrlviewer.html",
+          "sha256": "005bccf30dfb5c3df6d96acec40bfcdf92b8b3f69c7257f52eaa708d47e8a82e",
+          "json_url": "/222100DCZBOWV5DZ8372/2024-12-31/ESEF/LU/0/222100DCZBOWV5DZ8372-2024-12-31-en.json",
+          "date_added": "2025-05-21 16:39:03.853155",
+          "country": "LU",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2024-12-31",
+          "report_url": "/222100DCZBOWV5DZ8372/2024-12-31/ESEF/LU/0/222100DCZBOWV5DZ8372-2024-12-31-en/reports/222100DCZBOWV5DZ8372-2024-12-31-en.xhtml",
+          "package_url": "/222100DCZBOWV5DZ8372/2024-12-31/ESEF/LU/0/222100DCZBOWV5DZ8372-2024-12-31-en.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/222100DCZBOWV5DZ8372"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/19583/validation_messages"
+            }
+          }
+        },
+        "id": "19583",
+        "links": {
+          "self": "/api/filings/19583"
+        }
+      }
+    },
+    {
+      "country": "LV",
+      "lei": "2138002PKHUJIMVMYB13",
+      "name": "AS \"DelfinGroup\"",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "2138002PKHUJIMVMYB13-2023-12-31-ESEF-LV-0",
+          "error_count": 0,
+          "processed": "2024-07-09 15:52:57.653770",
+          "viewer_url": "/2138002PKHUJIMVMYB13/2023-12-31/ESEF/LV/0/asdelfingroup-2023-12-31-lv/reports/ixbrlviewer.html",
+          "sha256": "8c562220d6e22ce45f7dd8df64f164b5249df98bd4b3f219cffc93f2ef56cd06",
+          "json_url": "/2138002PKHUJIMVMYB13/2023-12-31/ESEF/LV/0/asdelfingroup-2023-12-31-lv.json",
+          "date_added": "2024-07-09 15:26:53.904808",
+          "country": "LV",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2023-12-31",
+          "report_url": "/2138002PKHUJIMVMYB13/2023-12-31/ESEF/LV/0/asdelfingroup-2023-12-31-lv/reports/asdelfingroup-2023-12-31-lv.xhtml",
+          "package_url": "/2138002PKHUJIMVMYB13/2023-12-31/ESEF/LV/0/asdelfingroup-2023-12-31-lv.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/2138002PKHUJIMVMYB13"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/15588/validation_messages"
+            }
+          }
+        },
+        "id": "15588",
+        "links": {
+          "self": "/api/filings/15588"
+        }
+      }
+    },
+    {
+      "country": "MT",
+      "lei": "391200ZCN16YSPNKID89",
+      "name": "SP FINANCE p.l.c.",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "391200ZCN16YSPNKID89-2024-12-31-ESEF-MT-0",
+          "error_count": 0,
+          "processed": "2025-05-21 14:59:40.452372",
+          "viewer_url": "/391200ZCN16YSPNKID89/2024-12-31/ESEF/MT/0/391200ZCN16YSPNKID89-2024-12-31-0-en/reports/ixbrlviewer.html",
+          "sha256": "7474218c72cac262a1deb9617aca4e64c9a4cc4576548067f62bbfd0b00e4e00",
+          "json_url": "/391200ZCN16YSPNKID89/2024-12-31/ESEF/MT/0/391200ZCN16YSPNKID89-2024-12-31-0-en.json",
+          "date_added": "2025-05-21 14:32:18.040293",
+          "country": "MT",
+          "warning_count": 4,
+          "inconsistency_count": 0,
+          "period_end": "2024-12-31",
+          "report_url": "/391200ZCN16YSPNKID89/2024-12-31/ESEF/MT/0/391200ZCN16YSPNKID89-2024-12-31-0-en/reports/391200ZCN16YSPNKID89-2024-12-31-0-en.html",
+          "package_url": "/391200ZCN16YSPNKID89/2024-12-31/ESEF/MT/0/391200ZCN16YSPNKID89-2024-12-31.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/391200ZCN16YSPNKID89"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/19489/validation_messages"
+            }
+          }
+        },
+        "id": "19489",
+        "links": {
+          "self": "/api/filings/19489"
+        }
+      }
+    },
+    {
+      "country": "NL",
+      "lei": "213800HKRFK8PNUNV581",
+      "name": "ACCSYS TECHNOLOGIES PLC",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "213800HKRFK8PNUNV581-2026-03-31-ESEF-NL-0",
+          "error_count": 0,
+          "processed": "2026-09-02 14:03:01.955413",
+          "viewer_url": "/213800HKRFK8PNUNV581/2026-03-31/ESEF/NL/0/213800HKRFK8PNUNV581-2026-03-31-1-en/reports/ixbrlviewer.html",
+          "sha256": "6d2137c2144d2056a5ed11c0c1c6a9b28e8e49a17b2b5a211abae6cb05015bef",
+          "json_url": "/213800HKRFK8PNUNV581/2026-03-31/ESEF/NL/0/213800HKRFK8PNUNV581-2026-03-31-1-en.json",
+          "date_added": "2026-09-02 13:20:42.008490",
+          "country": "NL",
+          "warning_count": 4,
+          "inconsistency_count": 0,
+          "period_end": "2026-03-31",
+          "report_url": "/213800HKRFK8PNUNV581/2026-03-31/ESEF/NL/0/213800HKRFK8PNUNV581-2026-03-31-1-en/reports/213800HKRFK8PNUNV581-2026-03-31-1-en.xhtml",
+          "package_url": "/213800HKRFK8PNUNV581/2026-03-31/ESEF/NL/0/213800HKRFK8PNUNV581-2026-03-31.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/213800HKRFK8PNUNV581"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/25930/validation_messages"
+            }
+          }
+        },
+        "id": "25930",
+        "links": {
+          "self": "/api/filings/25930"
+        }
+      }
+    },
+    {
+      "country": "NO",
+      "lei": "549300OZ3GTYOIZ25011",
+      "name": "SOFISA SA",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "549300OZ3GTYOIZ25011-2024-12-31-ESEF-NO-0",
+          "error_count": 0,
+          "processed": "2025-05-21 16:46:01.894544",
+          "viewer_url": "/549300OZ3GTYOIZ25011/2024-12-31/ESEF/NO/0/549300OZ3GTYOIZ25011-2024-12-31-0-en/reports/ixbrlviewer.html",
+          "sha256": "f3cb38fbd5b41f07e11f2513d9246ad143433994ea03b27699db74343dcc151e",
+          "json_url": "/549300OZ3GTYOIZ25011/2024-12-31/ESEF/NO/0/549300OZ3GTYOIZ25011-2024-12-31-0-en.json",
+          "date_added": "2025-05-21 16:38:20.652498",
+          "country": "NO",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2024-12-31",
+          "report_url": "/549300OZ3GTYOIZ25011/2024-12-31/ESEF/NO/0/549300OZ3GTYOIZ25011-2024-12-31-0-en/reports/549300OZ3GTYOIZ25011-2024-12-31-0-en.xhtml",
+          "package_url": "/549300OZ3GTYOIZ25011/2024-12-31/ESEF/NO/0/549300OZ3GTYOIZ25011-2024-12-31-0-en.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/549300OZ3GTYOIZ25011"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/19569/validation_messages"
+            }
+          }
+        },
+        "id": "19569",
+        "links": {
+          "self": "/api/filings/19569"
+        }
+      }
+    },
+    {
+      "country": "PL",
+      "lei": "2594007GQP5TDYY9OD45",
+      "name": "GRODNO Spółka Akcyjna",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "2594007GQP5TDYY9OD45-2024-03-31-ESEF-PL-0",
+          "error_count": 0,
+          "processed": "2024-07-30 11:50:20.464880",
+          "viewer_url": "/2594007GQP5TDYY9OD45/2024-03-31/ESEF/PL/0/esef-grodno-2024-03-31-pl/reports/ixbrlviewer.html",
+          "sha256": "9f7f9d54d2f72f87b373a0ca0cfee2f7fc3e4e6b228db1638faec00a92f5f3d3",
+          "json_url": "/2594007GQP5TDYY9OD45/2024-03-31/ESEF/PL/0/esef-grodno-2024-03-31-pl.json",
+          "date_added": "2024-07-30 11:26:50.684263",
+          "country": "PL",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2024-03-31",
+          "report_url": "/2594007GQP5TDYY9OD45/2024-03-31/ESEF/PL/0/esef-grodno-2024-03-31-pl/reports/esef-grodno-2024-03-31-pl.xhtml",
+          "package_url": "/2594007GQP5TDYY9OD45/2024-03-31/ESEF/PL/0/esef-grodno-2024-03-31-pl.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/2594007GQP5TDYY9OD45"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/16090/validation_messages"
+            }
+          }
+        },
+        "id": "16090",
+        "links": {
+          "self": "/api/filings/16090"
+        }
+      }
+    },
+    {
+      "country": "PT",
+      "lei": "JU1U6S0DG9YLT7N8ZV32",
+      "name": "BANCO COMERCIAL PORTUGUÊS S.A.",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "JU1U6S0DG9YLT7N8ZV32-2024-12-31-ESEF-PT-0",
+          "error_count": 0,
+          "processed": "2025-05-10 05:50:50.990503",
+          "viewer_url": "/JU1U6S0DG9YLT7N8ZV32/2024-12-31/ESEF/PT/0/000432-2024-12-31/reports/ixbrlviewer.html",
+          "sha256": "0c712edad5ab1df169701fa994a9029f8c51fffb9fec630c2c953467a554a092",
+          "json_url": "/JU1U6S0DG9YLT7N8ZV32/2024-12-31/ESEF/PT/0/000432-2024-12-31.json",
+          "date_added": "2025-05-08 11:39:29.939592",
+          "country": "PT",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2024-12-31",
+          "report_url": "/JU1U6S0DG9YLT7N8ZV32/2024-12-31/ESEF/PT/0/000432-2024-12-31/reports/000432-2024-12-31.xhtml",
+          "package_url": "/JU1U6S0DG9YLT7N8ZV32/2024-12-31/ESEF/PT/0/000432-2024-12-31.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/JU1U6S0DG9YLT7N8ZV32"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/19222/validation_messages"
+            }
+          }
+        },
+        "id": "19222",
+        "links": {
+          "self": "/api/filings/19222"
+        }
+      }
+    },
+    {
+      "country": "RO",
+      "lei": "2138008L93GYU5GN6179",
+      "name": "HEMOGENYX PHARMACEUTICALS PLC",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "2138008L93GYU5GN6179-2022-12-31-ESEF-RO-0",
+          "error_count": 0,
+          "processed": "2023-05-09 11:27:56.200307",
+          "viewer_url": "/2138008L93GYU5GN6179/2022-12-31/ESEF/RO/0/2138004WTEJACWP9GT35-2022-12-31/reports/ixbrlviewer.html",
+          "sha256": "e1303f3c980135a1251c953e4f8cefff5f25388d52abca3999cd4f18772cb2f3",
+          "json_url": "/2138008L93GYU5GN6179/2022-12-31/ESEF/RO/0/2138004WTEJACWP9GT35-2022-12-31-en.json",
+          "date_added": "2023-05-09 10:53:45.376775",
+          "country": "RO",
+          "warning_count": 4,
+          "inconsistency_count": 0,
+          "period_end": "2022-12-31",
+          "report_url": "/2138008L93GYU5GN6179/2022-12-31/ESEF/RO/0/2138004WTEJACWP9GT35-2022-12-31/reports/2138004WTEJACWP9GT35-2022-12-31-en.html",
+          "package_url": "/2138008L93GYU5GN6179/2022-12-31/ESEF/RO/0/2138004WTEJACWP9GT35-2022-12-31.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/2138008L93GYU5GN6179"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/5805/validation_messages"
+            }
+          }
+        },
+        "id": "5805",
+        "links": {
+          "self": "/api/filings/5805"
+        }
+      }
+    },
+    {
+      "country": "SE",
+      "lei": "549300ZWVSKHHDQPES93",
+      "name": "Ferronordic AB",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "549300ZWVSKHHDQPES93-2023-12-31-ESEF-SE-0",
+          "error_count": 0,
+          "processed": "2025-05-10 05:45:14.289727",
+          "viewer_url": "/549300ZWVSKHHDQPES93/2023-12-31/ESEF/SE/0/549300ZWVSKHHDQPES93-2023-12-31-sv/reports/ixbrlviewer.html",
+          "sha256": "2d6e41d975b11211d9b18f303ba41f2e2efa5fb8ef3157819da044d044f7cd01",
+          "json_url": "/549300ZWVSKHHDQPES93/2023-12-31/ESEF/SE/0/549300ZWVSKHHDQPES93-2023-12-31-sv.json",
+          "date_added": "2025-05-08 11:38:52.656851",
+          "country": "SE",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2023-12-31",
+          "report_url": "/549300ZWVSKHHDQPES93/2023-12-31/ESEF/SE/0/549300ZWVSKHHDQPES93-2023-12-31-sv/reports/549300ZWVSKHHDQPES93-2023-12-31-sv.xhtml",
+          "package_url": "/549300ZWVSKHHDQPES93/2023-12-31/ESEF/SE/0/549300ZWVSKHHDQPES93-2023-12-31-sv.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/549300ZWVSKHHDQPES93"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/19215/validation_messages"
+            }
+          }
+        },
+        "id": "19215",
+        "links": {
+          "self": "/api/filings/19215"
+        }
+      }
+    },
+    {
+      "country": "SI",
+      "lei": "984500DB3D0E9BCE1C41",
+      "name": "RELAX podjetje za turizem, trgovino in svetovanje d.d.",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "984500DB3D0E9BCE1C41-2025-12-31-ESEF-SI-0",
+          "error_count": 0,
+          "processed": "2026-06-11 16:53:33.449906",
+          "viewer_url": "/984500DB3D0E9BCE1C41/2025-12-31/ESEF/SI/0/relaxdd-2025-12-31-1-sl/reports/ixbrlviewer.html",
+          "sha256": "dea9f583546e66836b458a849ad7ef4ad26df21b6f7aa4c001b5267f141ea7cb",
+          "json_url": "/984500DB3D0E9BCE1C41/2025-12-31/ESEF/SI/0/relaxdd-2025-12-31-1-sl.json",
+          "date_added": "2026-05-27 09:26:11.511432",
+          "country": "SI",
+          "warning_count": 0,
+          "inconsistency_count": 0,
+          "period_end": "2025-12-31",
+          "report_url": "/984500DB3D0E9BCE1C41/2025-12-31/ESEF/SI/0/relaxdd-2025-12-31-1-sl/reports/relaxdd-2025-12-31-1-sl.xhtml",
+          "package_url": "/984500DB3D0E9BCE1C41/2025-12-31/ESEF/SI/0/984500DB3D0E9BCE1C41-2025-12-31.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/984500DB3D0E9BCE1C41"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/25052/validation_messages"
+            }
+          }
+        },
+        "id": "25052",
+        "links": {
+          "self": "/api/filings/25052"
+        }
+      }
+    },
+    {
+      "country": "SK",
+      "lei": "097900BGMO0000059267",
+      "name": "Prvá strategická, a.s.",
+      "filing": {
+        "type": "filing",
+        "attributes": {
+          "fxo_id": "097900BGMO0000059267-2025-12-31-ESEF-SK-0",
+          "error_count": 0,
+          "processed": "2026-07-08 12:05:07.804731",
+          "viewer_url": "/097900BGMO0000059267/2025-12-31/ESEF/SK/0/prv_strategick__a.s.-2025-12-31-sk/reports/ixbrlviewer.html",
+          "sha256": "d6f05c301729f4a631f8415526496578b60913b84f1fc9119298205704bdea3d",
+          "json_url": "/097900BGMO0000059267/2025-12-31/ESEF/SK/0/prv_strategick__a.s.-2025-12-31-sk.json",
+          "date_added": "2026-07-07 20:15:47.075800",
+          "country": "SK",
+          "warning_count": 9,
+          "inconsistency_count": 0,
+          "period_end": "2025-12-31",
+          "report_url": "/097900BGMO0000059267/2025-12-31/ESEF/SK/0/prv_strategick__a.s.-2025-12-31-sk/reports/prv_strategick__a.s.-2025-12-31-sk.html",
+          "package_url": "/097900BGMO0000059267/2025-12-31/ESEF/SK/0/097900BGMO0000059267-2025-12-31.zip"
+        },
+        "relationships": {
+          "entity": {
+            "links": {
+              "related": "/api/entities/097900BGMO0000059267"
+            }
+          },
+          "validation_messages": {
+            "links": {
+              "related": "/api/filings/25245/validation_messages"
+            }
+          }
+        },
+        "id": "25245",
+        "links": {
+          "self": "/api/filings/25245"
+        }
+      }
+    }
+  ]
+}

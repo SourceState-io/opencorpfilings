@@ -1,0 +1,736 @@
+{
+ "declared": "2026-10-09",
+ "rule": "v2 requalification of the supported routes (US, UK, JP, FR), Korea and the ESEF index. Each national route keeps its five v1 issuers and adds five fresh ones by the v1 rule (two large, two mid/small, one bank or insurer, none named in an earlier live check). The ESEF index keeps its five v1 LEIs and adds, for each of its 21 countries, the issuer whose record the index added most recently on 2026-10-09.",
+ "start": "2024-07-01",
+ "routes": [
+  {
+   "route": "US",
+   "market": "US",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "LIN",
+     "name": "Linde",
+     "class": "large"
+    },
+    {
+     "id": "DE",
+     "name": "Deere",
+     "class": "large"
+    },
+    {
+     "id": "CROX",
+     "name": "Crocs",
+     "class": "small"
+    },
+    {
+     "id": "POWL",
+     "name": "Powell Industries",
+     "class": "small"
+    },
+    {
+     "id": "PNC",
+     "name": "PNC Financial",
+     "class": "financial"
+    },
+    {
+     "id": "GD",
+     "name": "General Dynamics",
+     "class": "large",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "UNP",
+     "name": "Union Pacific",
+     "class": "large",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "SHAK",
+     "name": "Shake Shack",
+     "class": "small",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "CALM",
+     "name": "Cal-Maine Foods",
+     "class": "small",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "TRV",
+     "name": "Travelers",
+     "class": "financial",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "UK",
+   "market": "UK",
+   "forms": [
+    "annual"
+   ],
+   "issuers": [
+    {
+     "id": "04256886",
+     "name": "Marks and Spencer Group",
+     "class": "large"
+    },
+    {
+     "id": "00023307",
+     "name": "Diageo",
+     "class": "large"
+    },
+    {
+     "id": "02670969",
+     "name": "Games Workshop Group",
+     "class": "small"
+    },
+    {
+     "id": "00502851",
+     "name": "Greggs",
+     "class": "small"
+    },
+    {
+     "id": "SC095000",
+     "name": "Lloyds Banking Group",
+     "class": "financial"
+    },
+    {
+     "id": "01470151",
+     "name": "BAE Systems",
+     "class": "large",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "05393279",
+     "name": "Rentokil Initial",
+     "class": "large",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "01372603",
+     "name": "Bellway",
+     "class": "small",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "00040932",
+     "name": "Halma",
+     "class": "small",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "02468686",
+     "name": "Aviva",
+     "class": "financial",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "KR",
+   "market": "KR",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "051910",
+     "name": "LG Chem",
+     "class": "large"
+    },
+    {
+     "id": "005380",
+     "name": "Hyundai Motor",
+     "class": "large"
+    },
+    {
+     "id": "003490",
+     "name": "Korean Air",
+     "class": "small"
+    },
+    {
+     "id": "004370",
+     "name": "Nongshim",
+     "class": "small"
+    },
+    {
+     "id": "105560",
+     "name": "KB Financial",
+     "class": "financial"
+    },
+    {
+     "id": "000270",
+     "name": "Kia",
+     "class": "large",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "035720",
+     "name": "Kakao",
+     "class": "large",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "097950",
+     "name": "CJ CheilJedang",
+     "class": "small",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "282330",
+     "name": "BGF Retail",
+     "class": "small",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "000810",
+     "name": "Samsung Fire & Marine",
+     "class": "financial",
+     "set": "v2-fresh"
+    }
+   ],
+   "start": "2025-01-01"
+  },
+  {
+   "route": "JP",
+   "market": "JP",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "6501",
+     "name": "Hitachi",
+     "class": "large"
+    },
+    {
+     "id": "7974",
+     "name": "Nintendo",
+     "class": "large"
+    },
+    {
+     "id": "2809",
+     "name": "Kewpie",
+     "class": "small"
+    },
+    {
+     "id": "7453",
+     "name": "Ryohin Keikaku",
+     "class": "small"
+    },
+    {
+     "id": "8306",
+     "name": "Mitsubishi UFJ",
+     "class": "financial"
+    },
+    {
+     "id": "6981",
+     "name": "Murata Manufacturing",
+     "class": "large",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "8035",
+     "name": "Tokyo Electron",
+     "class": "large",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "2802",
+     "name": "Ajinomoto",
+     "class": "small",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "9843",
+     "name": "Nitori Holdings",
+     "class": "small",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "8766",
+     "name": "Tokio Marine",
+     "class": "financial",
+     "set": "v2-fresh"
+    }
+   ],
+   "start": "2025-06-01"
+  },
+  {
+   "route": "FR",
+   "market": "FR",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "969500XXRPGD7HCAFA90",
+     "name": "Legrand",
+     "class": "large"
+    },
+    {
+     "id": "969500KMUQ2B6CBAF162",
+     "name": "Danone",
+     "class": "large"
+    },
+    {
+     "id": "96950091FL62XSLPHO35",
+     "name": "Fnac Darty",
+     "class": "small"
+    },
+    {
+     "id": "9695000KWQEBUDT6IO19",
+     "name": "Lectra",
+     "class": "small"
+    },
+    {
+     "id": "R0MUWSFPU8MPRO8K5P83",
+     "name": "BNP Paribas",
+     "class": "financial"
+    },
+    {
+     "id": "549300SOSI58J6VIW052",
+     "name": "Michelin",
+     "class": "large",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "96950077L0TN7BAROX36",
+     "name": "Capgemini",
+     "class": "large",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "969500MGFIKUGLTC9742",
+     "name": "Rubis",
+     "class": "small",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "969500WP61NBK098AC47",
+     "name": "SEB",
+     "class": "small",
+     "set": "v2-fresh"
+    },
+    {
+     "id": "F5WCUMTUM4RKZ1MAIE39",
+     "name": "AXA",
+     "class": "financial",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-IT",
+   "market": "IT",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "WOCMU6HCI0OJWNPRZS33",
+     "name": "Enel",
+     "class": "large"
+    },
+    {
+     "id": "815600D581F8552C4F54",
+     "name": "most recently indexed IT issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-NO",
+   "market": "NO",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "OW6OFBNCKXC4US5C7523",
+     "name": "Equinor",
+     "class": "large"
+    },
+    {
+     "id": "549300OZ3GTYOIZ25011",
+     "name": "most recently indexed NO issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-AT",
+   "market": "AT",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "5299006UDSEJCTTEJS30",
+     "name": "Verbund",
+     "class": "large"
+    },
+    {
+     "id": "529900PD3SI453KAW989",
+     "name": "most recently indexed AT issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-PT",
+   "market": "PT",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "2138003319Y7NM75FG53",
+     "name": "Galp Energia SGPS",
+     "class": "large"
+    },
+    {
+     "id": "JU1U6S0DG9YLT7N8ZV32",
+     "name": "most recently indexed PT issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-LU",
+   "market": "LU",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "2EULGUTUI56JI9SAL165",
+     "name": "ArcelorMittal",
+     "class": "large"
+    },
+    {
+     "id": "222100DCZBOWV5DZ8372",
+     "name": "most recently indexed LU issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-BE",
+   "market": "BE",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "5493000O0NZ1BCXO8K39",
+     "name": "most recently indexed BE issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-DK",
+   "market": "DK",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "529900VSWLQF0O3GA946",
+     "name": "most recently indexed DK issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-EE",
+   "market": "EE",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "25490093MDYISEP1Y539",
+     "name": "most recently indexed EE issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-ES",
+   "market": "ES",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "95980020140005491250",
+     "name": "most recently indexed ES issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-FI",
+   "market": "FI",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "743700WUIPC24LVMLO66",
+     "name": "most recently indexed FI issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-FR",
+   "market": "FR",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "969500M5EQJVDASURW53",
+     "name": "most recently indexed FR issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-GR",
+   "market": "GR",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "213800NW1S2T9JRVU437",
+     "name": "most recently indexed GR issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-HR",
+   "market": "HR",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "3157002G3ENYCZEB1A25",
+     "name": "most recently indexed HR issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-HU",
+   "market": "HU",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "529900VUFNK4NMC6YJ22",
+     "name": "most recently indexed HU issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-IS",
+   "market": "IS",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "635400TICHH43JJTNP54",
+     "name": "most recently indexed IS issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-LT",
+   "market": "LT",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "48510000P2S3LHJPX414",
+     "name": "most recently indexed LT issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-MT",
+   "market": "MT",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "391200ZCN16YSPNKID89",
+     "name": "most recently indexed MT issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-NL",
+   "market": "NL",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "213800HKRFK8PNUNV581",
+     "name": "most recently indexed NL issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-SE",
+   "market": "SE",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "549300ZWVSKHHDQPES93",
+     "name": "most recently indexed SE issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-SI",
+   "market": "SI",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "984500DB3D0E9BCE1C41",
+     "name": "most recently indexed SI issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  },
+  {
+   "route": "ESEF-SK",
+   "market": "SK",
+   "source": "esef_index",
+   "host": "esef_index",
+   "forms": [
+    "annual"
+   ],
+   "start": null,
+   "issuers": [
+    {
+     "id": "097900BGMO0000059267",
+     "name": "most recently indexed SK issuer",
+     "class": "index-sample",
+     "set": "v2-fresh"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "GET https://info-financiere.gouv.fr/api/explore/v2.1/catalog/datasets/flux-amf-new-prod/records?limit=1&offset=0&order_by=uin_dat_amf+DESC&where=identificationsociete_iso_cd_lei+%3D+%27969500XXRPGD7HCAFA90%27": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "000.bin.gz",
+  "status": 200
+ },
+ "GET https://info-financiere.gouv.fr/api/explore/v2.1/catalog/datasets/flux-amf-new-prod/records?limit=100&offset=0&order_by=uin_dat_amf+DESC&where=%28identificationsociete_iso_cd_lei+%3D+%27969500XXRPGD7HCAFA90%27+OR+identificationsociete_iso_cd_isi+IN+%28%27FR0010307819%27%29%29+AND+%28informationdeposee_inf_stp_pri+%3D+%27003000%27+OR+informationdeposee_inf_stp_inf+LIKE+%27%25%22003000%22%25%27%29": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "001.bin.gz",
+  "status": 200
+ }
+}

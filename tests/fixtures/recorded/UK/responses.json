@@ -1,0 +1,12 @@
+{
+ "GET https://find-and-update.company-information.service.gov.uk/company/00502851/filing-history?": {
+  "content_type": "text/html;charset=UTF-8",
+  "file": "001.bin.gz",
+  "status": 200
+ },
+ "GET https://find-and-update.company-information.service.gov.uk/company/00502851?": {
+  "content_type": "text/html;charset=UTF-8",
+  "file": "000.bin.gz",
+  "status": 200
+ }
+}

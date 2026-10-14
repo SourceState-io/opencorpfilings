@@ -1,0 +1,33 @@
+name: New source request
+description: Ask for a regulator or filing system that OpenCorpFilings does not cover yet.
+labels: [new source]
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Regulator or system
+      description: The official source, for example "Hong Kong HKEXnews".
+    validations:
+      required: true
+  - type: input
+    id: docs
+    attributes:
+      label: Official documentation or API URL
+    validations:
+      required: true
+  - type: textarea
+    id: access
+    attributes:
+      label: Access and terms
+      description: Is a key or registration needed? Do the terms allow automated access and reuse of the documents? Link the terms.
+    validations:
+      required: true
+  - type: textarea
+    id: identifiers
+    attributes:
+      label: Identifiers, documents and history
+      description: How companies are identified, which filing types you need, and how far back the source goes.
+  - type: textarea
+    id: why
+    attributes:
+      label: What you would build with it

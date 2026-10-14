@@ -1,0 +1,17 @@
+{
+ "GET https://dart.fss.or.kr/corp/searchCorp.ax?textCrpNm=005930": {
+  "content_type": "text/html; charset=UTF-8",
+  "file": "000.bin.gz",
+  "status": 200
+ },
+ "GET https://engopendart.fss.or.kr/engapi/company.json?corp_code=00126380": {
+  "content_type": "application/json;charset=UTF-8",
+  "file": "001.bin.gz",
+  "status": 200
+ },
+ "GET https://engopendart.fss.or.kr/engapi/list.json?bgn_de=20260101&corp_code=00126380&end_de=20261008&last_reprt_at=N&page_count=100&page_no=1&pblntf_detail_ty=A001&sort=date&sort_mth=desc": {
+  "content_type": "application/json;charset=UTF-8",
+  "file": "002.bin.gz",
+  "status": 200
+ }
+}

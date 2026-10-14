@@ -1,0 +1,12 @@
+{
+ "GET https://api.edinet-fsa.go.jp/api/v2/documents.json?date=2026-06-10&type=2": {
+  "content_type": "application/json; charset=utf-8",
+  "file": "001.bin.gz",
+  "status": 200
+ },
+ "GET https://disclosure2dl.edinet-fsa.go.jp/searchdocument/codelist/Edinetcode.zip?": {
+  "content_type": "application/octet-stream",
+  "file": "000.bin.gz",
+  "status": 200
+ }
+}

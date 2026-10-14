@@ -1,0 +1,17 @@
+{
+ "GET https://data.sec.gov/submissions/CIK0000080420.json?": {
+  "content_type": "application/json",
+  "file": "000.bin.gz",
+  "status": 200
+ },
+ "GET https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/0000080420-25-000152-index.htm?": {
+  "content_type": "text/html; charset=UTF-8",
+  "file": "002.bin.gz",
+  "status": 200
+ },
+ "GET https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/index.json?": {
+  "content_type": "application/json",
+  "file": "001.bin.gz",
+  "status": 200
+ }
+}

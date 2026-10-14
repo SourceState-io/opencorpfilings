@@ -1,0 +1,25 @@
+{
+ "identifier": "7203",
+ "market": "JP",
+ "query": {
+  "form": "annual",
+  "start": "2026-06-10",
+  "end": "2026-06-10"
+ },
+ "entity_id": "E02144",
+ "filing_id": "S100Y8NY",
+ "filing_type_raw": "120",
+ "filing_type_normalized": "ANNUAL",
+ "period_end": "2026-03-31",
+ "filing_date": "2026-06-10",
+ "amendment": false,
+ "language": "ja",
+ "document_count": 4,
+ "primary_filename": "S100Y8NY-original.zip",
+ "primary_role": "report",
+ "roles": {
+  "annex": 1,
+  "data": 1,
+  "report": 2
+ }
+}

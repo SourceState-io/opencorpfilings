@@ -1,0 +1,25 @@
+{
+ "identifier": "80420",
+ "market": "US",
+ "query": {
+  "form": "annual"
+ },
+ "entity_id": "0000080420",
+ "filing_id": "0000080420-25-000152",
+ "filing_type_raw": "10-K",
+ "filing_type_normalized": "ANNUAL",
+ "period_end": "2025-09-30",
+ "filing_date": "2025-11-19",
+ "amendment": false,
+ "language": null,
+ "document_count": 108,
+ "primary_filename": "powl-20250930.htm",
+ "primary_role": "report",
+ "roles": {
+  "data": 6,
+  "exhibit": 9,
+  "generated": 90,
+  "other": 2,
+  "report": 1
+ }
+}

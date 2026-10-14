@@ -1,0 +1,21 @@
+{
+ "identifier": "969500XXRPGD7HCAFA90",
+ "market": "FR",
+ "query": {
+  "form": "annual"
+ },
+ "entity_id": "969500XXRPGD7HCAFA90",
+ "filing_id": "370:623156_20260408",
+ "filing_type_raw": "300005",
+ "filing_type_normalized": "ANNUAL",
+ "period_end": null,
+ "filing_date": "2026-04-08",
+ "amendment": false,
+ "language": "fr",
+ "document_count": 1,
+ "primary_filename": "FC370623156_20260408.zip",
+ "primary_role": "report",
+ "roles": {
+  "report": 1
+ }
+}

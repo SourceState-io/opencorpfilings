@@ -1,0 +1,398 @@
+{
+ "declared": "2026-10-09",
+ "rule": "v3 qualification of the second-wave national routes after the shared package reader: each route's five v1 issuers plus five fresh ones by the v1 rule; forms per the route profile; Sweden runs without a date filter, which its source cannot apply.",
+ "start": "2024-07-01",
+ "routes": [
+  {
+   "route": "ES",
+   "market": "ES",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "A78374725",
+     "name": "Repsol",
+     "class": "large"
+    },
+    {
+     "id": "A28015865",
+     "name": "Telefonica",
+     "class": "large"
+    },
+    {
+     "id": "A01004324",
+     "name": "Vidrala",
+     "class": "small"
+    },
+    {
+     "id": "A47412333",
+     "name": "Ebro Foods",
+     "class": "small"
+    },
+    {
+     "id": "A28157360",
+     "name": "Bankinter",
+     "class": "financial"
+    },
+    {
+     "id": "A-28004885",
+     "name": "ACS",
+     "class": "large",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "A58389123",
+     "name": "Grifols",
+     "class": "large",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "A-28250777",
+     "name": "Acerinox",
+     "class": "small",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "A-31065501",
+     "name": "Viscofan",
+     "class": "small",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "A08663619",
+     "name": "CaixaBank",
+     "class": "financial",
+     "set": "v3-fresh"
+    }
+   ]
+  },
+  {
+   "route": "NL",
+   "market": "NL",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "Wolters Kluwer N.V.",
+     "name": "Wolters Kluwer",
+     "class": "large"
+    },
+    {
+     "id": "Akzo Nobel N.V.",
+     "name": "Akzo Nobel",
+     "class": "large"
+    },
+    {
+     "id": "Fugro N.V.",
+     "name": "Fugro",
+     "class": "small"
+    },
+    {
+     "id": "Sligro Food Group N.V.",
+     "name": "Sligro",
+     "class": "small"
+    },
+    {
+     "id": "NN Group N.V.",
+     "name": "NN Group",
+     "class": "financial"
+    },
+    {
+     "id": "Randstad N.V.",
+     "name": "Randstad",
+     "class": "large",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "Aalberts N.V.",
+     "name": "Aalberts",
+     "class": "small",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "Corbion N.V.",
+     "name": "Corbion",
+     "class": "small",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "ARCADIS N.V.",
+     "name": "Arcadis",
+     "class": "large",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "Aegon Ltd.",
+     "name": "Aegon",
+     "class": "financial",
+     "set": "v3-fresh"
+    }
+   ]
+  },
+  {
+   "route": "DK",
+   "market": "DK",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "DK-58233528",
+     "name": "DSV",
+     "class": "large"
+    },
+    {
+     "id": "DK-69749917",
+     "name": "Coloplast",
+     "class": "large"
+    },
+    {
+     "id": "DK-27528406",
+     "name": "Matas",
+     "class": "small"
+    },
+    {
+     "id": "DK-13228345",
+     "name": "Columbus",
+     "class": "small"
+    },
+    {
+     "id": "DK-61126228",
+     "name": "Danske Bank",
+     "class": "financial"
+    },
+    {
+     "id": "DK-36213728",
+     "name": "Orsted",
+     "class": "large",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "DK-71186911",
+     "name": "Demant",
+     "class": "large",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "DK-54879415",
+     "name": "ROCKWOOL",
+     "class": "small",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "DK-41956712",
+     "name": "Royal Unibrew",
+     "class": "small",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "DK-17616617",
+     "name": "Jyske Bank",
+     "class": "financial",
+     "set": "v3-fresh"
+    }
+   ]
+  },
+  {
+   "route": "SE",
+   "market": "SE",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "556000-3468",
+     "name": "Sandvik",
+     "class": "large"
+    },
+    {
+     "id": "556325-5511",
+     "name": "Essity",
+     "class": "large"
+    },
+    {
+     "id": "556035-8672",
+     "name": "Clas Ohlson",
+     "class": "small"
+    },
+    {
+     "id": "556770-6311",
+     "name": "Thule Group",
+     "class": "small"
+    },
+    {
+     "id": "502017-7753",
+     "name": "Swedbank",
+     "class": "financial"
+    },
+    {
+     "id": "556007-3495",
+     "name": "SKF",
+     "class": "large",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "556009-4178",
+     "name": "Electrolux",
+     "class": "large",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "556000-5331",
+     "name": "Husqvarna",
+     "class": "small",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "556112-5690",
+     "name": "Bilia",
+     "class": "small",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "502032-9081",
+     "name": "SEB",
+     "class": "financial",
+     "set": "v3-fresh"
+    }
+   ],
+   "start": null
+  },
+  {
+   "route": "PL",
+   "market": "PL",
+   "forms": [
+    "annual"
+   ],
+   "issuers": [
+    {
+     "id": "ORLEN SPÓŁKA AKCYJNA",
+     "name": "ORLEN",
+     "class": "large"
+    },
+    {
+     "id": "KGHM POLSKA MIEDŹ SPÓŁKA AKCYJNA",
+     "name": "KGHM",
+     "class": "large"
+    },
+    {
+     "id": "AMICA WRONKI SA",
+     "name": "Amica",
+     "class": "small"
+    },
+    {
+     "id": "Budimex SA",
+     "name": "Budimex",
+     "class": "small"
+    },
+    {
+     "id": "POWSZECHNA KASA OSZCZĘDNOŚCI BANK POLSKI SA",
+     "name": "PKO Bank Polski",
+     "class": "financial"
+    },
+    {
+     "id": "POWSZECHNY ZAKŁAD UBEZPIECZEŃ SPÓŁKA AKCYJNA",
+     "name": "PZU",
+     "class": "financial",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "CD PROJEKT Spółka Akcyjna",
+     "name": "CD Projekt",
+     "class": "large",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "LPP SA",
+     "name": "LPP",
+     "class": "large",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "ASSECO Poland SA",
+     "name": "Asseco Poland",
+     "class": "small",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "BANK POLSKA KASA OPIEKI SPÓŁKA AKCYJNA",
+     "name": "Pekao",
+     "class": "financial",
+     "set": "v3-fresh"
+    }
+   ]
+  },
+  {
+   "route": "FI",
+   "market": "FI",
+   "forms": [
+    "annual",
+    "interim"
+   ],
+   "issuers": [
+    {
+     "id": "537",
+     "name": "Kesko",
+     "class": "large"
+    },
+    {
+     "id": "1099",
+     "name": "UPM-Kymmene",
+     "class": "large"
+    },
+    {
+     "id": "622",
+     "name": "Marimekko",
+     "class": "small"
+    },
+    {
+     "id": "4773",
+     "name": "Harvia",
+     "class": "small"
+    },
+    {
+     "id": "865",
+     "name": "Sampo",
+     "class": "financial"
+    },
+    {
+     "id": "691",
+     "name": "Nokian Renkaat",
+     "class": "small",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "354",
+     "name": "Fiskars",
+     "class": "small",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "3211",
+     "name": "Valmet",
+     "class": "large",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "3869",
+     "name": "Tokmanni",
+     "class": "small",
+     "set": "v3-fresh"
+    },
+    {
+     "id": "4754",
+     "name": "Nordea Bank",
+     "class": "financial",
+     "set": "v3-fresh"
+    }
+   ],
+   "host": "nasdaq_oam"
+  }
+ ]
+}

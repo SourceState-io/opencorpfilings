@@ -1,0 +1,24 @@
+{
+ "identifier": "005930",
+ "market": "KR",
+ "query": {
+  "form": "annual",
+  "start": "2026-01-01",
+  "end": "2026-10-08"
+ },
+ "entity_id": "00126380",
+ "filing_id": "20260310002820",
+ "filing_type_raw": "Annual Report (2025.12)",
+ "filing_type_normalized": "ANNUAL",
+ "period_end": "2025-12-31",
+ "filing_date": "2026-03-10",
+ "amendment": false,
+ "language": "ko",
+ "document_count": 2,
+ "primary_filename": "20260310002820-original.zip",
+ "primary_role": "report",
+ "roles": {
+  "data": 1,
+  "report": 1
+ }
+}
