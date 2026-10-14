@@ -38,7 +38,7 @@ jobs:
         env:
           OPENCORPFILINGS_SEC_USER_AGENT: ${{ secrets.OPENCORPFILINGS_SEC_USER_AGENT }}
       - run: mkdocs build --strict -d site
-      - uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
       - id: deployment
