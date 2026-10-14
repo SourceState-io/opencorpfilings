@@ -125,6 +125,9 @@ where [`find_company`](guide/finding-companies.md) keeps its company index
 
 ## Your first filing
 
+Need a company identifier? [Find a company](find/) searches by name, ticker,
+ISIN or LEI in your browser and gives you a ready-to-copy `Company(...)` line.
+
 Open a company with the identifier its market uses, select a filing, and read
 its documents. The outputs below come from the
 [quickstart notebook](https://github.com/sourcestate-io/opencorpfilings/blob/main/examples/notebooks/01_quickstart.ipynb).

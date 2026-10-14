@@ -15,6 +15,7 @@
 
 <p align="center">
   <a href="#quickstart">Quickstart</a> ·
+  <a href="https://sourcestate-io.github.io/opencorpfilings/find/">Find a company</a> ·
   <a href="#coverage">Coverage</a> ·
   <a href="https://sourcestate-io.github.io/opencorpfilings/">Documentation</a> ·
   <a href="examples/notebooks/README.md">Notebooks</a> ·
@@ -54,6 +55,9 @@ and source credentials.
 ## Quickstart
 
 Download Apple's latest annual report from SEC EDGAR:
+
+Starting with another company? [Find a company](https://sourcestate-io.github.io/opencorpfilings/find/)
+searches by name, ticker, ISIN or LEI and gives you a ready-to-copy `Company(...)` line.
 
 ```python
 from opencorpfilings import Company
