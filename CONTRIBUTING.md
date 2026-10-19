@@ -67,6 +67,8 @@ company-directory refresh, which runs weekly. See the
 [contributor guide](https://sourcestate-io.github.io/opencorpfilings/contributing/#dependency-updates)
 for local verification commands.
 
+## Source access and licensing
+
 Code contributed here must be original or carry a recorded compatible source
 license and attribution. Source-data access rights are separate from software
 licenses; a licensed scraper implementation does not itself grant permission
