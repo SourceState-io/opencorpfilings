@@ -18,6 +18,9 @@ from opencorpfilings.providers.poland_oam import PolandOAMProvider
 from opencorpfilings.providers.sec import SECProvider
 from opencorpfilings.providers.spain_cnmv import SpainCNMVProvider
 from opencorpfilings.providers.sweden_oam import SwedenOAMProvider
+from opencorpfilings.providers.brazil_cvm import BrazilCVMProvider
+from opencorpfilings.providers.chile_cmf import ChileCMFProvider
+from test_brazil_chile import BrazilTransport, ChileTransport
 
 from test_companies_house_provider import _transport as uk_transport
 from test_denmark_oam import DenmarkTransport
@@ -101,6 +104,8 @@ def _cases():
     yield "PL", PL_NAME, PolandOAMProvider(transport=PolandTransport()), {"form": "annual", "limit": 1}
     yield "NL", "ASML Holding N.V.", NetherlandsOAMProvider(transport=AFMTransport()), {"form": "annual"}
     yield "DK", "DK-61056416", DenmarkOAMProvider(transport=DenmarkTransport()), {"form": "annual", "limit": 1}
+    yield "BR", "9512", BrazilCVMProvider(transport=BrazilTransport()), {"form": "annual", "start": "2026-01-01", "end": "2026-12-31"}
+    yield "CL", "90690000", ChileCMFProvider(transport=ChileTransport()), {"form": "annual"}
 
 
 @pytest.mark.parametrize("market,identifier,provider,filters", list(_cases()))
@@ -117,6 +122,8 @@ def test_company_to_original_document_across_sources(market, identifier, provide
         # The source exposes a file ID, while the filing key combines issuer,
         # report class and a period label that has no exact filing date.
         assert filing.provenance.source_id == filing.primary_document.document_id
+    elif provider.name == "brazil_cvm":
+        assert filing.provenance.source_id == filing.provider_metadata["Protocolo_Entrega"]
     else:
         assert filing.provenance.source_id == filing.filing_id
     assert filing.provenance.provider == provider.name

@@ -38,6 +38,10 @@ are not on this page. Each search links to Companies House's own search, and
 `find_company()` searches Companies House live. Korea is not listed: Open
 DART's terms do not cover republishing its company list.
 
+For Brazil and Chile, use the market-specific Python search in the
+[Brazil CVM](../markets/br.md) and [Chile CMF](../markets/cl.md) guides; these
+registers are not included in this browser list.
+
 <p id="ocf-find-sources" class="ocf-find-sources"></p>
 
 <script src="find.js"></script>

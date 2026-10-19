@@ -83,6 +83,8 @@ nav:
       - United Kingdom (Companies House): markets/uk.md
       - Japan (EDINET): markets/jp.md
       - France (Info-Financiere): markets/fr.md
+      - Brazil (CVM): markets/br.md
+      - Chile (CMF): markets/cl.md
       - ESEF index: markets/esef.md
       - Experimental routes: markets/experimental.md
   - Concepts:

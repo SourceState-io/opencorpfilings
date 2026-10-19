@@ -20,7 +20,7 @@ print(provider_info("IT", source="esef_index").coverage_note)
 ```
 
 ```text
-('AT', 'BE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GR', 'HR', 'HU', 'IS', 'IT', 'JP', 'KR', 'LT', 'LU', 'MT', 'NL', 'NO', 'PL', 'PT', 'SE', 'SI', 'SK', 'UK', 'US')
+('AT', 'BE', 'BR', 'CL', 'DK', 'EE', 'ES', 'FI', 'FR', 'GR', 'HR', 'HU', 'IS', 'IT', 'JP', 'KR', 'LT', 'LU', 'MT', 'NL', 'NO', 'PL', 'PT', 'SE', 'SI', 'SK', 'UK', 'US')
 supported ('four-digit securities code', 'EDINET code') ('annual', 'interim', 'quarterly', 'current', 'other') True required API key: api_key=, OPENCORPFILINGS_EDINET_API_KEY or EDINET_API_KEY
 Secondary index of ESEF annual reports by LEI; it lags regulators by months and is incomplete. On 2026-10-08 it held 974 FY2025 December-year-end reports against 2,142 for FY2024 (45%), with whole countries at 0%.
 ```
@@ -35,7 +35,7 @@ against this profile before contacting the source.
 |---|---|---|
 | <span class="ocf-tier ocf-tier--supported">supported</span> | qualified on fresh issuers: every sampled latest-annual workflow passed the release qualification | US, UK, JP, FR |
 | <span class="ocf-tier ocf-tier--limited">limited</span> | useful history with documented gaps | the ESEF index |
-| <span class="ocf-tier ocf-tier--experimental">experimental</span> | implemented but not qualified for this release; opening one emits `ExperimentalRouteWarning` once per route and process | KR, ES, NL, DK, SE, PL, FI |
+| <span class="ocf-tier ocf-tier--experimental">experimental</span> | implemented but not qualified for this release; opening one emits `ExperimentalRouteWarning` once per route and process | BR, CL, KR, ES, NL, DK, SE, PL, FI |
 
 Experimental and limited routes are outside the [stability promise](../stability.md):
 they may change, be promoted or be removed in a minor release. The
@@ -44,7 +44,7 @@ qualification runs are recorded in
 
 ## Route matrix
 
-From `provider_info()` for every route in version 1.0.2. The ESEF index
+From `provider_info()` for every route in version 1.1.0. The ESEF index
 row stands for 21 country routes, selected with `source="esef_index"` where a
 national route also exists.
 
@@ -57,6 +57,8 @@ national route also exists.
 | [JP](jp.md) | `edinet` | supported | four-digit securities code, EDINET code | annual, interim, quarterly, current, other |
 | [FR](fr.md) | `france_oam` | supported | LEI, exact source issuer name | annual, interim, quarterly |
 | [ESEF index](esef.md) | `esef_index` | limited | LEI | annual |
+| [BR](br.md) | `brazil_cvm` | experimental | CVM code, CNPJ, exact company name | annual, current, other |
+| [CL](cl.md) | `chile_cmf` | experimental | RUT, exact company name | annual, interim, quarterly |
 | [KR](experimental.md#korea-open-dart) | `open_dart` | experimental | six-character stock code, eight-digit corporation code | annual, interim, quarterly, other |
 | [ES](experimental.md#spain-cnmv) | `spain_cnmv` | experimental | issuer NIF | annual, interim |
 | [NL](experimental.md#netherlands-afm) | `netherlands_oam` | experimental | exact register issuer name | annual, interim |
@@ -74,6 +76,8 @@ national route also exists.
 | JP | no | yes | yes | `source_file_date` | API key (required) |
 | FR | category codes only | yes | yes | `published_at` | none |
 | ESEF index | no | no | no | `report_period` | none |
+| BR | yes | yes | yes | `filing_date` (delivery date) | none |
+| CL | no | no | no | `report_period` | none |
 | KR | no | yes | yes | `filing_date` | API key (required) |
 | ES | no | yes | no | `filing_date` | none |
 | NL | no | yes | no | `filing_date` | none |
@@ -99,6 +103,8 @@ an individual filing can have fewer formats or no facts. Check one with
 | JP | yes | | | yes | yes | yes (XBRL, iXBRL) | |
 | FR | yes | yes | yes | yes | yes | yes (iXBRL) | |
 | ESEF index | | yes | yes | | yes | yes (xBRL-JSON or iXBRL) | |
+| BR | yes | yes | | yes | | | |
+| CL | yes | yes | | yes | yes | yes (XBRL) | |
 | KR | yes | | | | yes | yes (XBRL) | |
 | ES | yes | | yes | yes | yes | yes (XBRL, iXBRL) | |
 | NL | yes | yes | yes | yes | yes | yes (iXBRL) | |

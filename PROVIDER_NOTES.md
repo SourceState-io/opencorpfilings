@@ -25,6 +25,21 @@ Contents:
 - [Command-line details](#command-line-details)
 - [Benchmarks and live checks](#benchmarks-and-live-checks)
 
+## Brazil CVM and Chile CMF
+
+New in 1.1.0; both routes are experimental and require no API key.
+[Brazil](docs/markets/br.md) resolves CVM codes/CNPJs, reads bounded IPE
+delivery-year metadata and retrieves individual original PDFs. Its ten-second
+default pacing observes the data host's crawl delay. This excludes DFP/ITR.
+[Chile](docs/markets/cl.md) resolves active securities issuers by RUT, verifies
+the public IFRS report selector's issuer/period/balance and retrieves PDF/XBRL
+originals. No filing date is inferred from its query clock. Its signed links
+may expire; reopen the company and select the report for fresh links.
+
+Both support `search_companies`, streamed saves and direct composite-key
+lookup. The cross-market `find_company` index does not include their registers.
+The guides document composite IDs, source attribution and request bounds.
+
 ## Issuer lookup and filing selection
 
 If you know a company name but not its regulator identifier, search within a
@@ -46,7 +61,7 @@ a ticker-list search result; the original search record remains on
 `company.entity`, and `company.search_result` keeps the selected source
 candidate and its provenance.
 
-`search_companies()` currently supports US SEC, UK Companies House, Korean Open DART,
+`search_companies()` currently supports Brazil CVM, Chile CMF, US SEC, UK Companies House, Korean Open DART,
 Japanese EDINET, Polish KNF, Swedish Finanscentralen, French Info-Financiere,
 Spanish CNMV, the Finnish Nasdaq OAM, the Netherlands AFM financial-reporting
 register and Danish OAM. It

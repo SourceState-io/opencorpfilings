@@ -17,6 +17,19 @@ you do not have it, there are two ways to look it up.
 To look one up without Python, the [Find a company](../find/index.md) page searches
 the same lists in the browser (all but the live UK search).
 
+Brazil and Chile are available through market-specific source search:
+
+```python
+from opencorpfilings import Company, search_companies
+
+Company(search_companies("Petrobras", market="BR", limit=1)[0])
+Company(search_companies("Copec", market="CL", limit=1)[0])
+```
+
+Their official registers are not yet part of the combined `find_company()`
+index or the browser directory. Use a CVM code/CNPJ for [Brazil](../markets/br.md)
+or a RUT for [Chile](../markets/cl.md).
+
 ## `find_company`
 
 ```python

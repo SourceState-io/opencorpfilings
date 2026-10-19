@@ -13,7 +13,7 @@ back to the record it came from.
 
 | Field | Meaning | Examples |
 |---|---|---|
-| `filing.filing_id` | the source's own record ID; nothing is renumbered | SEC accession `0000320193-25-000079`; EDINET document ID `S100Y8NY`; France `diffuser:UIN` `370:623156_20260408`; ESEF index record `24793` |
+| `filing.filing_id` | native record ID or a documented composite of source fields (for BR/CL) | SEC accession `0000320193-25-000079`; EDINET document ID `S100Y8NY`; France `diffuser:UIN` `370:623156_20260408`; ESEF index record `24793` |
 | `filing.entity_id` | the source's own issuer ID | CIK, Companies House number, EDINET code, LEI |
 | `document.document_id` | the source's or route's ID for one document | |
 | `filing.jurisdiction` | the market code | `US`, `UK`, `JP`, `FR`, `IT` |

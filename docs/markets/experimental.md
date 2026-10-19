@@ -1,14 +1,15 @@
 ---
-title: 'Experimental European and Open DART filing routes'
-description: 'Review experimental filing access for Spain, Netherlands, Denmark, Sweden, Poland, Finland and South Korea, including source limitations.'
+title: 'Experimental filing routes: Brazil, Chile, Europe and Open DART'
+description: 'Review experimental CVM, CMF, European and South Korean filing routes, with source coverage and limitations.'
 ---
 
 # Experimental routes
 
-<span class="ocf-tier ocf-tier--experimental">experimental</span> · KR, ES, NL, DK, SE, PL, FI
+<span class="ocf-tier ocf-tier--experimental">experimental</span> · BR, CL, KR, ES, NL, DK, SE, PL, FI
 
-These routes are implemented and tested offline, but have not been qualified
-for this release. Opening a `Company` on one emits an
+These routes have narrower release guarantees than supported routes. Brazil
+and Chile are new in 1.1.0, with live original-document checks recorded in
+[BENCHMARKS.md](https://github.com/SourceState-io/opencorpfilings/blob/main/BENCHMARKS.md#brazil-and-chile-2026-10-19). Opening a `Company` on one emits an
 `ExperimentalRouteWarning` once per route and process:
 
 ```text
@@ -37,6 +38,12 @@ Company("502017-7753", market="SE").filings(form="annual").latest()
 Company("mBank Spółka Akcyjna", market="PL").filings(form="annual").latest()
 Company("KONE Oyj", market="FI").filings(form="annual").latest()
 ```
+
+## Brazil and Chile
+
+The new [Brazil CVM](br.md) and [Chile CMF](cl.md) guides cover identifiers,
+forms, original documents, request bounds and source attribution. Both are
+keyless. Brazil exposes IPE PDFs; Chile exposes IFRS PDFs and classic XBRL.
 
 ## Korea (Open DART)
 

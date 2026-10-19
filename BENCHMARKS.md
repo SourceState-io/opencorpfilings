@@ -1,5 +1,65 @@
 # Single-filing benchmarks
 
+## Brazil and Chile, 2026-10-19
+
+Version 1.1.0 adds two **experimental** national routes. Before publication,
+a bounded check selected one annual financial report for each of ten
+registry-confirmed issuers per market. All 20 selected PDFs saved, retained
+source provenance and passed direct filing-key lookup. The first five PDF
+pages supplied readable text and a 2025 reference in every case. No source
+reports, metadata databases or signed download tokens are bundled.
+
+| Market | Issuer | Identifier | PDF pages | Raw facts / source elements |
+|---|---|---|---:|---:|
+| BR | VALE S.A. | `4170` | 156 | PDF only |
+| BR | BANCO DO BRASIL S.A. | `1023` | 177 | PDF only |
+| BR | BANCO BRADESCO S.A. | `906` | 314 | PDF only |
+| BR | ITAÚ UNIBANCO HOLDING S.A. | `19348` | 133 | PDF only |
+| BR | WEG SA | `5410` | 66 | PDF only |
+| BR | CEMIG DISTRIBUIÇÃO S/A | `20303` | 177 | PDF only |
+| BR | SUZANO S.A. | `13986` | 181 | PDF only |
+| BR | AMBEV S.A. | `23264` | 147 | PDF only |
+| BR | EMBRAER S.A. | `20087` | 28 | PDF only |
+| BR | OI S.A. - EM RECUPERAÇÃO JUDICIAL | `11312` | 120 | PDF only |
+| CL | CEMENTO POLPAICO S.A. | `91337000` | 115 | 5,665 / 5,665 |
+| CL | SOCIEDAD QUIMICA Y MINERA DE CHILE S.A. | `93007000` | 204 | 13,805 / 13,805 |
+| CL | ENEL GENERACION CHILE S.A. | `91081000` | 124 | 5,019 / 5,019 |
+| CL | EMPRESAS COPEC S.A. | `90690000` | 176 | 10,274 / 10,274 |
+| CL | CENCOSUD S.A. | `93834000` | 201 | 9,711 / 9,711 |
+| CL | COLBUN S.A. | `96505760` | 131 | 5,378 / 5,378 |
+| CL | AGUAS ANDINAS S.A. | `61808000` | 107 | 4,726 / 4,726 |
+| CL | EMBOTELLADORA ANDINA S.A. | `91144000` | 96 | 4,984 / 4,984 |
+| CL | FALABELLA S.A. | `90749000` | 141 | 18,508 / 18,508 |
+| CL | LATAM AIRLINES GROUP S.A. | `89862200` | 149 | 4,526 / 4,526 |
+
+For all ten Chilean reports, parsed classic XBRL occurrence counts equalled
+an independent count of elements with `contextRef` in the original instance.
+This checks occurrence completeness for those files, not accounting semantics
+or cross-issuer comparability. CVM IPE does not supply structured DFP/ITR data.
+
+Additional live checks selected Petrobras's annual PDF and material announcement,
+and Copec's June 2026 interim/quarterly PDF after correctly skipping the unavailable
+September report. Notebook 06 ran all cells against live sources, including
+source search, streamed saves, PDF page text and Copec's 10,274 raw facts.
+
+The identifier preflight also rejected eight unlisted identifiers and found
+no annual in the default five-year window for two historical Brazilian issuers.
+The confirmed sample uses source-registry identities and reuses ten successful
+preflight originals; it is a named smoke check, not an unbiased market sample.
+Both routes remain experimental: submission-history recall, every source form,
+all balances and historical vintages have not been qualified. Full-document
+text quality is outside this check. CMF signed download links may expire.
+
+[Machine-readable evidence](benchmarks/country_expansion_20261019.json) records
+filing keys, original SHA-256 hashes, file sizes, page counts and raw-fact counts.
+Recheck an individual record with `Company(identifier, market=market).get_filing(key)`;
+`benchmarks/provider_workflow.py BR 9512 --form annual` and
+`benchmarks/provider_workflow.py CL 90690000 --form annual --facts` run the
+full text workflow against the source's latest selection. Source terms and
+request bounds are documented in the [Brazil](docs/markets/br.md) and
+[Chile](docs/markets/cl.md) guides.
+
+
 ## Source search to filing handoff, 2026-10-08
 
 The same `search_companies()` candidate-to-`Company()` filing workflow passed

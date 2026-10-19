@@ -8,7 +8,7 @@
 <p align="center"><strong>Global company filings. One Python API.</strong></p>
 
 <p align="center">
-  <a href="https://github.com/SourceState-io/opencorpfilings/releases/tag/v1.0.2"><img src="https://img.shields.io/badge/release-1.0.2-0B2545" alt="Release 1.0.2"></a>
+  <a href="https://github.com/SourceState-io/opencorpfilings/releases/tag/v1.1.0"><img src="https://img.shields.io/badge/release-1.1.0-0B2545" alt="Release 1.1.0"></a>
   <a href="#install"><img src="https://img.shields.io/badge/python-3.11–3.13-0B2545" alt="Python 3.11 to 3.13"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-10B981" alt="MIT license"></a>
 </p>
@@ -25,17 +25,17 @@
 # OpenCorpFilings
 
 A Python library for global company filings from SEC EDGAR, Companies House,
-EDINET, France's AMF/DILA service and the European ESEF index. Retrieve
+EDINET, France's AMF/DILA service, Brazil's CVM, Chile's CMF and the European ESEF index. Retrieve
 original reports and financial statements as filed, read document text,
 and extract HTML tables and raw
 XBRL/iXBRL facts through **one API**, with source IDs, dates and URLs preserved.
 
 ## Install
 
-Release status: **1.0.2**. Install from GitHub; the package is not on PyPI.
+Release status: **1.1.0**. Install from GitHub; the package is not on PyPI.
 
 ```bash
-pip install "opencorpfilings @ git+https://github.com/SourceState-io/opencorpfilings@v1.0.2"
+pip install "opencorpfilings @ git+https://github.com/SourceState-io/opencorpfilings@v1.1.0"
 ```
 
 <details>
@@ -44,7 +44,7 @@ pip install "opencorpfilings @ git+https://github.com/SourceState-io/opencorpfil
 Add only the extras your workflow needs:
 
 ```bash
-pip install "opencorpfilings[pdf,markdown,pandas] @ git+https://github.com/SourceState-io/opencorpfilings@v1.0.2"
+pip install "opencorpfilings[pdf,markdown,pandas] @ git+https://github.com/SourceState-io/opencorpfilings@v1.1.0"
 ```
 
 </details>
@@ -106,6 +106,8 @@ See the [Japan guide](docs/markets/jp.md).
 | [Japan](docs/markets/jp.md) | EDINET | **Supported** |
 | [France](docs/markets/fr.md) | AMF / DILA Info-Financière | **Supported** |
 | [21 EU/EEA countries](docs/markets/esef.md) | ESEF index · filings.xbrl.org | Limited |
+| [Brazil](docs/markets/br.md) | CVM IPE | Experimental |
+| [Chile](docs/markets/cl.md) | CMF IFRS reports | Experimental |
 | [South Korea](docs/markets/experimental.md#korea-open-dart) | Open DART | Experimental |
 | [ES, NL, DK, SE, PL, FI](docs/markets/experimental.md) | National filing sources | Experimental |
 
@@ -114,7 +116,7 @@ See the [Japan guide](docs/markets/jp.md).
 - **Limited:** the ESEF index provides tagged annual reports across 21
   countries but can lag national sources.
 - **Experimental:** implemented routes emit a warning and may change in minor
-  releases. European routes await promotion; Korea's document endpoint
+  releases. Brazil and Chile are new in 1.1.0; European routes await promotion. Korea's document endpoint
   reported maintenance during qualification.
 
 Form coverage and authentication vary by source. Inspect a route with
@@ -122,6 +124,22 @@ Form coverage and authentication vary by source. Inspect a route with
 [market guides](docs/markets/index.md) document credentials, supported forms,
 date filters and known gaps; [benchmarks](BENCHMARKS.md) record qualification
 results and workflow timings.
+
+Brazil and Chile need no API keys. Use their regulator identifiers directly
+or search within the market:
+
+```python
+from opencorpfilings import Company, search_companies
+
+petrobras = Company("9512", market="BR")                 # CVM code; CNPJ also accepted
+copec = Company(search_companies("Copec", market="CL", limit=1)[0])
+print(petrobras.filings(form="annual").latest())
+print(copec.filings(form="annual").latest())
+```
+
+Brazil returns original IPE PDFs; Chile returns IFRS PDFs and XBRL packages.
+Chile orders reports by period and leaves the filing date unset. These markets
+use `search_companies()`; they are not yet in `find_company()` or the browser directory.
 
 ## Common workflows
 
@@ -202,7 +220,7 @@ ocf markets
 
 ## Working with source data
 
-Filing IDs and form codes remain the source's own. Filing dates, publication
+Native IDs and form labels are preserved. Where a source has no single record ID, the route documents its composite filing key. Filing dates, publication
 times, reporting periods and index-addition dates stay separate; missing
 dates are `None`. Raw fact values retain their filed strings, units and
 dimensions. Financial statements are available within the original reports;

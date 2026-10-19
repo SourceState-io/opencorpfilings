@@ -13,6 +13,8 @@ _ORIGINAL = {
     "UK": ("companies_house", "CompaniesHouseProvider"),
     "KR": ("open_dart", "OpenDARTProvider"),
     "JP": ("edinet", "EDINETProvider"),
+    "BR": ("brazil_cvm", "BrazilCVMProvider"),
+    "CL": ("chile_cmf", "ChileCMFProvider"),
 }
 # Common codes that are not this library's market codes.
 _ALIASES = {"GB": "UK", "USA": "US", "JA": "JP", "JPN": "JP", "KOR": "KR", "FRA": "FR"}

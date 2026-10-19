@@ -1,6 +1,20 @@
 # Changelog
 
-## Unreleased
+## 1.1.0 — 2026-10-19
+
+- Brazil (`BR`): CVM issuer search by name, CVM code or CNPJ; original IPE
+  annual financial statements, material announcements and other PDFs. Delivery
+  dates, source versions and restatement flags are preserved. Bounded metadata
+  discovery observes the data host's ten-second crawl delay. DFP/ITR is outside scope.
+- Chile (`CL`): active securities issuer search by RUT/name; consolidated or
+  individual IFRS annual, half-year and quarterly reports, original PDFs,
+  XBRL packages and source-located classic raw facts. Report periods remain
+  separate from filing dates, which the portal does not supply.
+- Both new routes support direct composite-key lookup and streamed original
+  saves. They start experimental. Added market guides, examples, source-access
+  notes and live-check evidence. Their registers are outside the combined
+  company-search index; use market-specific `search_companies()`.
+
 
 - Dependency maintenance: monthly checks group minor and patch updates per
   ecosystem, while major upgrades remain separate PRs. Contributor guidance
