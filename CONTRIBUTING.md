@@ -40,6 +40,33 @@ For an optional source check after setting that provider's environment
 variables, run `python examples/one_filing.py --market US` (or another
 supported market). It fetches one example filing and one selected document.
 
+## Dependency updates
+
+Dependabot checks Python dependencies and GitHub Actions monthly. Routine
+minor and patch version updates are grouped into one PR per ecosystem;
+major upgrades remain individual PRs. Dependency security alerts stay enabled.
+Version-update scheduling and grouping do not change security-alert delivery.
+Updates require maintainer review; automatic merging is disabled.
+
+For an update:
+
+1. Read the upstream release notes, including breaking changes and runner
+   requirements. Check each major upgrade separately, even when several
+   reviewed upgrades are incorporated into one maintenance change.
+2. Run the offline tests, README checks and strict documentation build. All
+   package, base-install and documentation CI jobs must pass. CI builds the
+   wheel and source archive and verifies installation with only declared
+   dependencies on Python 3.11–3.13, plus base installs on Windows and Linux.
+3. Changes to the Pages actions also need a successful real deployment:
+   directory refresh, strict site build, artifact upload and Pages publication.
+   Check the live site and company search after deployment. If publication
+   fails, fix or revert the workflow before considering the update complete.
+
+The monthly dependency checks are separate from the documentation site's
+company-directory refresh, which runs weekly. See the
+[contributor guide](https://sourcestate-io.github.io/opencorpfilings/contributing/#dependency-updates)
+for local verification commands.
+
 Code contributed here must be original or carry a recorded compatible source
 license and attribution. Source-data access rights are separate from software
 licenses; a licensed scraper implementation does not itself grant permission

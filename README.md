@@ -225,7 +225,8 @@ from arguments or environment variables; `.env` files are not loaded.
   history and API guarantees.
 - [Issues](https://github.com/SourceState-io/opencorpfilings/issues) — report
   bugs or request a filing source. Include the version, market and filing ID.
-- [Contributing](CONTRIBUTING.md) — development setup and provider requirements.
+- [Contributing](CONTRIBUTING.md) — development setup, provider requirements
+  and [dependency updates](CONTRIBUTING.md#dependency-updates).
 - [Security](SECURITY.md) — report vulnerabilities privately; never post keys.
 
 ## License

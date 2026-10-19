@@ -33,6 +33,31 @@ python examples/one_filing.py --market US
 It fetches one example filing and one selected document. Live checks stay out
 of regular CI.
 
+## Dependency updates
+
+Dependabot checks Python dependencies and GitHub Actions monthly. Minor and
+patch version updates are grouped into one PR per ecosystem; major upgrades
+remain individual PRs. Maintainers review the release notes and check breaking
+changes before merging. Automatic merging is disabled, and dependency
+security alerts remain enabled independently of the monthly schedule.
+
+Use an environment with the development extras and the documentation theme:
+
+```bash
+pip install -e ".[dev]" "mkdocs-material==9.7.7"
+pytest tests
+mkdocs build --strict
+```
+
+GitHub CI also builds the wheel and source archive, checks isolated
+installation, runs package tests on Python 3.11–3.13, and checks base installs
+on Windows and Linux. All jobs must pass. For Pages-action changes, a real
+deployment must also complete the company-directory refresh, site build,
+artifact upload and publication; then check the live site and
+[company search](find/index.md). If publication fails, fix or revert the
+workflow before considering the update complete. The directory still refreshes
+weekly; dependency checks remain monthly.
+
 ## Adding or improving a route
 
 1. Implement `FilingProvider` in `src/opencorpfilings/providers/` and register

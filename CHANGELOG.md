@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Dependency maintenance: monthly checks group minor and patch updates per
+  ecosystem, while major upgrades remain separate PRs. Contributor guidance
+  covers release-note review, CI, package installation and live Pages checks.
+- CI and documentation deployment use checkout/setup-python v7 and the Pages
+  upload/deployment actions v5.
+
 - Refined README navigation, quickstart and workflow examples; compact market
   and content tables link to the full guides. Release and compatibility badges
   identify the supported release; CI is linked directly from the header.
