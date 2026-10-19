@@ -44,7 +44,7 @@ qualification runs are recorded in
 
 ## Route matrix
 
-From `provider_info()` for every route in version 1.1.0. The ESEF index
+From `provider_info()` for every route in version 1.1.1. The ESEF index
 row stands for 21 country routes, selected with `source="esef_index"` where a
 national route also exists.
 

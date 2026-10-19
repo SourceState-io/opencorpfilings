@@ -29,9 +29,11 @@ With the `pdf` extra, `report.primary_document.page(1).text` reads the first
 page. Search uses the official company register, prioritizing active issuers
 and exact trade-name matches; tickers are not inferred.
 Multiple trading-venue rows for one CVM code become one issuer candidate,
-with the original rows retained in metadata. Brazil is not yet included in
-the cross-market `find_company()` index or the browser directory; use
-`search_companies(..., market="BR")`.
+with the original rows retained in metadata. Active CVM registrations also appear in
+`find_company()` and the browser [Find a company](../find/index.md) page.
+Search legal/trade names, CVM codes or CNPJs; no B3 ticker mapping is inferred.
+Inactive registrations remain accessible through market-specific source search.
+Registry membership does not guarantee an available annual IPE report.
 
 ## Forms and originals
 

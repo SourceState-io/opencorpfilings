@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.1.1 — 2026-10-19
+
+- `find_company()` and the browser directory now include active Brazilian CVM
+  registrations and Chilean CMF securities issuers. Search legal/trade names,
+  CVM codes/CNPJs or RUTs. No issuer-profile or original-report requests are
+  needed to build these pools.
+- Existing cached indexes refresh automatically after upgrade; failed list
+  refreshes retain earlier rows and warn, as for the other sources.
+- The browser publishes the derived Brazil directory separately under ODbL,
+  with CVM attribution and a machine-readable download. CMF is attributed.
+  Only company names and identifiers are exported; source contact fields stay out.
+
 ## 1.1.0 — 2026-10-19
 
 - Brazil (`BR`): CVM issuer search by name, CVM code or CNPJ; original IPE

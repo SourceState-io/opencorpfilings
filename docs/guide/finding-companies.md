@@ -17,7 +17,8 @@ you do not have it, there are two ways to look it up.
 To look one up without Python, the [Find a company](../find/index.md) page searches
 the same lists in the browser (all but the live UK search).
 
-Brazil and Chile are available through market-specific source search:
+Brazil and Chile are included in `find_company()` and the browser search.
+You can also query each source register directly:
 
 ```python
 from opencorpfilings import Company, search_companies
@@ -26,9 +27,10 @@ Company(search_companies("Petrobras", market="BR", limit=1)[0])
 Company(search_companies("Copec", market="CL", limit=1)[0])
 ```
 
-Their official registers are not yet part of the combined `find_company()`
-index or the browser directory. Use a CVM code/CNPJ for [Brazil](../markets/br.md)
-or a RUT for [Chile](../markets/cl.md).
+The index includes active CVM registrations for [Brazil](../markets/br.md)
+and active CMF securities issuers for [Chile](../markets/cl.md). Legal/trade
+names, CVM codes and CNPJs identify Brazilian matches; names and RUTs identify
+Chilean matches. Neither list adds inferred stock tickers.
 
 ## `find_company`
 
@@ -115,11 +117,15 @@ first use:
 | US | SEC `company_tickers_exchange.json` (CIK, ticker, exchange); skipped with a warning unless `OPENCORPFILINGS_SEC_USER_AGENT` is set |
 | JP | EDINET code list, listed companies (EDINET and securities codes) |
 | FR | the AMF/DILA `codes-lei` and `liste-code-isi` datasets (LEI, ISIN) |
+| BR | active CVM company register, one issuer per CVM code (legal/trade names, CNPJ); source data under ODbL |
+| CL | CMF active securities issuer register (name, RUT), with source attribution |
 | ESEF index countries | filings.xbrl.org entities by country (LEI) |
 
 The index is saved as `company-index.json` in `cache_dir`, else
 `OPENCORPFILINGS_CACHE_DIR`, else `~/.cache/opencorpfilings`, and reused for
-seven days. `refresh=True` rebuilds it. A list that cannot be downloaded is
+seven days. `refresh=True` rebuilds it. Installing 1.1.1 automatically
+refreshes the older index format so the new countries appear immediately.
+CVM data carries its source URL and ODbL license in the cache metadata. A list that cannot be downloaded is
 skipped and the others are still indexed. Every search warns while a list is
 missing. An index missing a list that failed to download is rebuilt after an
 hour; until a list downloads again, the rows the previous index had from it are

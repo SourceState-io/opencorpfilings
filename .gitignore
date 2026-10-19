@@ -15,3 +15,4 @@ examples/notebooks/downloads/
 
 # built by scripts/build_find_index.py at deploy time
 docs/find/companies.json
+docs/find/cvm-companies.json

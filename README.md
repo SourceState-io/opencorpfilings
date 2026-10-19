@@ -8,7 +8,7 @@
 <p align="center"><strong>Global company filings. One Python API.</strong></p>
 
 <p align="center">
-  <a href="https://github.com/SourceState-io/opencorpfilings/releases/tag/v1.1.0"><img src="https://img.shields.io/badge/release-1.1.0-0B2545" alt="Release 1.1.0"></a>
+  <a href="https://github.com/SourceState-io/opencorpfilings/releases/tag/v1.1.1"><img src="https://img.shields.io/badge/release-1.1.1-0B2545" alt="Release 1.1.1"></a>
   <a href="#install"><img src="https://img.shields.io/badge/python-3.11–3.13-0B2545" alt="Python 3.11 to 3.13"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-10B981" alt="MIT license"></a>
 </p>
@@ -32,10 +32,10 @@ XBRL/iXBRL facts through **one API**, with source IDs, dates and URLs preserved.
 
 ## Install
 
-Release status: **1.1.0**. Install from GitHub; the package is not on PyPI.
+Release status: **1.1.1**. Install from GitHub; the package is not on PyPI.
 
 ```bash
-pip install "opencorpfilings @ git+https://github.com/SourceState-io/opencorpfilings@v1.1.0"
+pip install "opencorpfilings @ git+https://github.com/SourceState-io/opencorpfilings@v1.1.1"
 ```
 
 <details>
@@ -44,7 +44,7 @@ pip install "opencorpfilings @ git+https://github.com/SourceState-io/opencorpfil
 Add only the extras your workflow needs:
 
 ```bash
-pip install "opencorpfilings[pdf,markdown,pandas] @ git+https://github.com/SourceState-io/opencorpfilings@v1.1.0"
+pip install "opencorpfilings[pdf,markdown,pandas] @ git+https://github.com/SourceState-io/opencorpfilings@v1.1.1"
 ```
 
 </details>
@@ -116,7 +116,7 @@ See the [Japan guide](docs/markets/jp.md).
 - **Limited:** the ESEF index provides tagged annual reports across 21
   countries but can lag national sources.
 - **Experimental:** implemented routes emit a warning and may change in minor
-  releases. Brazil and Chile are new in 1.1.0; European routes await promotion. Korea's document endpoint
+  releases. Brazil and Chile were added in 1.1.0; European routes await promotion. Korea's document endpoint
   reported maintenance during qualification.
 
 Form coverage and authentication vary by source. Inspect a route with
@@ -138,8 +138,9 @@ print(copec.filings(form="annual").latest())
 ```
 
 Brazil returns original IPE PDFs; Chile returns IFRS PDFs and XBRL packages.
-Chile orders reports by period and leaves the filing date unset. These markets
-use `search_companies()`; they are not yet in `find_company()` or the browser directory.
+Chile orders reports by period and leaves the filing date unset. Both are
+searchable through `find_company()` and the browser directory by
+name, CVM code/CNPJ (Brazil) or RUT (Chile).
 
 ## Common workflows
 
@@ -158,7 +159,9 @@ print(filing)
 ```
 
 The first search builds a local index from official company lists; later
-calls reuse it for a week. Set `OPENCORPFILINGS_SEC_USER_AGENT` to include
+calls reuse it for a week. Brazil adds active CVM registrations and Chile
+adds active CMF securities issuers, with their legal names and regulator IDs.
+Set `OPENCORPFILINGS_SEC_USER_AGENT` to include
 US results. UK name search queries Companies House live and can return any
 registered company; Korea is not indexed.
 [Company search guide](docs/guide/finding-companies.md)

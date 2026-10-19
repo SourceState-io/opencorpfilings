@@ -26,8 +26,10 @@ facts = report.facts                        # original classic XBRL occurrences
 print(len(facts))                           # 10,274 in that check
 ```
 
-Use `search_companies(..., market="CL")` for Chilean names. The cross-market
-`find_company()` index and browser directory do not yet include this register.
+Active securities issuers also appear in `find_company()` and the browser
+[Find a company](../find/index.md) page, searchable by name or RUT.
+`search_companies(..., market="CL")` queries the source register directly.
+Registry membership does not guarantee a financial report for every period.
 This route covers the securities-issuer register and its IFRS portal, rather
 than every CMF-supervised institution or a separate banking reporting system.
 

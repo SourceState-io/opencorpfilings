@@ -22,7 +22,7 @@ filings in bulk across companies. A download covers one company and needs an
 explicit bound.
 
 !!! info "Release status"
-    Version 1.1.0, Python 3.11 to 3.13, MIT
+    Version 1.1.1, Python 3.11 to 3.13, MIT
     licensed. Install from GitHub; the package is not published to PyPI.
     See [Getting started](getting-started.md) to install it.
 

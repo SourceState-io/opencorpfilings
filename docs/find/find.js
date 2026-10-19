@@ -79,20 +79,25 @@
     }
   }
 
-  fetch("companies.json").then((response) => {
+  function load(url) { return fetch(url).then((response) => {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return response.json();
-  }).then((data) => {
+  }); }
+  load("companies.json").then((data) => Promise.all([
+    data, ...(data.related_datasets || []).map(load)
+  ])).then((datasets) => {
+    const data = datasets[0];
     const at = Object.fromEntries(data.fields.map((field, i) => [field, i]));
-    rows = data.rows.map((values) => {
+    rows = datasets.flatMap((dataset) => dataset.rows).map((values) => {
       const row = Object.fromEntries(data.fields.map((field) => [field, values[at[field]]]));
       row.exact = new Set([row.identifier, ...row.tickers, ...row.isins, row.lei || "", ...row.aliases]
         .filter(Boolean).map((value) => value.toLowerCase()));
       row.names = [row.name, ...row.aliases].map((name) => ({ normal: normal(name), tokens: tokens(name) }));
       return row;
     });
-    sources.innerHTML = `List built ${escape(data.built_at.slice(0, 10))} from: ` + data.sources.map((source) =>
-      `<a href="${escape(source.url)}" target="_blank" rel="noopener">${escape(source.name)}</a>`).join("; ") + ".";
+    sources.innerHTML = `Lists built ${escape(data.built_at.slice(0, 10))} from: ` + datasets.flatMap((dataset) => dataset.sources).map((source) =>
+      `<a href="${escape(source.url)}" target="_blank" rel="noopener">${escape(source.name)}</a>` +
+      (source.license_url ? ` (<a href="${escape(source.license_url)}">ODbL 1.0</a>)` : "")).join("; ") + ".";
     query.addEventListener("input", render);
     render();
     query.focus();

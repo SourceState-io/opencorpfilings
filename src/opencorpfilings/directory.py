@@ -8,6 +8,8 @@ and cached for a week:
 - US: SEC `company_tickers_exchange.json` (CIK, ticker, exchange)
 - JP: EDINET code list, listed companies (EDINET and securities codes)
 - FR: the AMF/DILA open `codes-lei` and `liste-code-isi` datasets (LEI, ISIN)
+- BR: active CVM registrations (CVM code, CNPJ, legal/trade names), under ODbL
+- CL: CMF active securities issuers (RUT, name), with source attribution
 - ESEF index: filings.xbrl.org entities by country (LEI)
 
 The UK has no list of listed companies; its name search runs live against
@@ -30,15 +32,17 @@ from .errors import OpenCorpFilingsError
 
 if TYPE_CHECKING:
     from .company import Company
+    from .models import Entity
 
 INDEX_FILE = "company-index.json"
-INDEX_VERSION = 1
+INDEX_VERSION = 2
 MAX_AGE = timedelta(days=7)
 INCOMPLETE_MAX_AGE = timedelta(hours=1)  # an index missing a list is retried sooner
 _NO_SEC_AGENT = "OPENCORPFILINGS_SEC_USER_AGENT is not set; the US list was skipped"
 _SEC = "https://www.sec.gov/files/company_tickers_exchange.json"
 _FR = "https://info-financiere.gouv.fr/api/explore/v2.1/catalog/datasets/{}/exports/json"
 _ESEF = "https://filings.xbrl.org/api/filings"
+_CVM_LICENSE_URL = "https://opendatacommons.org/licenses/odbl/1-0/"
 _ISIN = re.compile(r"[A-Z]{2}[A-Z0-9]{9}[0-9]\Z")
 _LEGAL_FORMS = frozenset({
     "inc", "incorporated", "corp", "corporation", "co", "company", "plc", "ltd", "limited", "llc", "lp",
@@ -85,7 +89,8 @@ def _tokens(text: str) -> list[str]:
 
 
 def build_rows(*, sec: dict | None = None, edinet: list[dict] | None = None, france_lei: list[dict] | None = None,
-               france_isin: list[dict] | None = None, esef: list[dict] | None = None) -> list[dict[str, Any]]:
+               france_isin: list[dict] | None = None, esef: list[dict] | None = None,
+               brazil: list[Entity] | None = None, chile: list[Entity] | None = None) -> list[dict[str, Any]]:
     """Index rows from the raw official lists; any list may be absent."""
     rows: list[dict[str, Any]] = []
     if sec:
@@ -125,6 +130,19 @@ def build_rows(*, sec: dict | None = None, edinet: list[dict] | None = None, fra
         rows.append({"market": record["country"], "identifier": record["lei"], "source": "esef_index",
                      "name": record["name"], "tickers": [], "isins": [], "lei": record["lei"], "exchange": None,
                      "aliases": [], "listed_by": "filings.xbrl.org ESEF index"})
+    for entity in brazil or ():
+        records = entity.provider_metadata["source_rows"]
+        if not any(record.get("SIT") == "ATIVO" for record in records):
+            continue
+        cnpj = entity.provider_metadata["CNPJ_CIA"]
+        aliases = [cnpj, re.sub(r"\D", "", cnpj), *(record.get("DENOM_COMERC", "") for record in records)]
+        rows.append({"market": "BR", "identifier": entity.entity_id, "source": None, "name": entity.name,
+                     "tickers": [], "isins": [], "lei": None, "exchange": None,
+                     "aliases": list(dict.fromkeys(aliases)), "listed_by": "CVM active company register (ODbL)"})
+    for entity in chile or ():
+        rows.append({"market": "CL", "identifier": entity.entity_id, "source": None, "name": entity.name,
+                     "tickers": [], "isins": [], "lei": None, "exchange": None,
+                     "aliases": [entity.provider_metadata["rut"]], "listed_by": "CMF active securities issuer register"})
     for row in rows:
         row["aliases"] = [alias for alias in row["aliases"] if alias]
     return rows
@@ -187,6 +205,8 @@ def _fetch_rows(transport) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Download every official list; a list that fails is skipped and reported."""
     from .providers.edinet import REGISTRY, _registry_rows
     from .providers.esef import INDEX_COUNTRIES
+    from .providers.brazil_cvm import BrazilCVMProvider, _REGISTRY as cvm_registry
+    from .providers.chile_cmf import ChileCMFProvider, _REGISTRY as cmf_registry
 
     status: dict[str, Any] = {}
     lists: dict[str, Any] = {}
@@ -206,6 +226,11 @@ def _fetch_rows(transport) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     attempt("edinet", lambda: _registry_rows(transport.get(REGISTRY)))
     attempt("france_lei", lambda: transport.get_json(_FR.format("codes-lei")))
     attempt("france_isin", lambda: transport.get_json(_FR.format("liste-code-isi")))
+    attempt("brazil", lambda: BrazilCVMProvider(transport=transport)._registry())
+    status["brazil"].update(source_url=cvm_registry, license_url=_CVM_LICENSE_URL)
+    attempt("chile", lambda: ChileCMFProvider(transport=transport)._registry())
+    status["chile"].update(source_url=cmf_registry,
+                           terms_url="https://www.cmfchile.cl/portal/principal/623/w4-article-1833.html")
 
     def esef():
         records = []
@@ -228,7 +253,8 @@ def _fetch_rows(transport) -> tuple[list[dict[str, Any]], dict[str, Any]]:
 
     attempt("esef", esef)
     rows = build_rows(sec=lists.get("sec"), edinet=lists.get("edinet"), france_lei=lists.get("france_lei"),
-                      france_isin=lists.get("france_isin"), esef=lists.get("esef"))
+                      france_isin=lists.get("france_isin"), esef=lists.get("esef"),
+                      brazil=lists.get("brazil"), chile=lists.get("chile"))
     return rows, status
 
 
@@ -236,7 +262,8 @@ _LEI_LIKE = re.compile(r"[A-Z0-9]{20}")
 #: the rows each official list contributes, by their `listed_by`
 _LISTED_BY = {"sec": "SEC company_tickers_exchange.json", "edinet": "EDINET code list",
               "france_lei": "AMF/DILA codes-lei and liste-code-isi",
-              "france_isin": "AMF/DILA codes-lei and liste-code-isi", "esef": "filings.xbrl.org ESEF index"}
+              "france_isin": "AMF/DILA codes-lei and liste-code-isi", "esef": "filings.xbrl.org ESEF index",
+              "brazil": "CVM active company register (ODbL)", "chile": "CMF active securities issuer register"}
 _UK_LIVE = "Companies House search (live)"
 _LIVE_PENALTY = 25
 _LOADED: dict[Path, tuple[float, list[dict[str, Any]]]] = {}
@@ -253,6 +280,8 @@ def _cache_dir(cache_dir: str | Path | None) -> Path:
 def _fresh(stored: dict[str, Any]) -> bool:
     """An index lasts a week. One missing a list it failed to download lasts an hour, and one built
     without the SEC contact is rebuilt as soon as the contact is set."""
+    if stored.get("version") != INDEX_VERSION:
+        return False
     age = datetime.now(timezone.utc) - datetime.fromisoformat(stored["built_at"])
     gaps = {name: entry for name, entry in stored.get("sources", {}).items() if not entry.get("ok", True)}
     if gaps.get("sec", {}).get("error") == _NO_SEC_AGENT:
@@ -290,7 +319,7 @@ def _load_rows(cache_dir: str | Path | None, refresh: bool) -> list[dict[str, An
             if not refresh and path in _LOADED and _LOADED[path][0] == mtime and _fresh(_LOADED[path][1]):
                 return _rows_reporting_gaps(_LOADED[path][1])
             stored = json.loads(path.read_text(encoding="utf-8"))
-            if stored.get("version") == INDEX_VERSION:
+            if stored.get("version") in {1, INDEX_VERSION}:
                 previous = stored
                 if not refresh and _fresh(stored):
                     _LOADED[path] = (mtime, stored)

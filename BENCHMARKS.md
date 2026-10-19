@@ -1,5 +1,24 @@
 # Single-filing benchmarks
 
+## Company search pools, 2026-10-19
+
+The 1.1.1 directory build adds 662 active CVM registrations and 336 active
+CMF securities issuers: 998 entries, for 16,640 source-route entries overall
+in this snapshot. Companies appearing on several filing routes remain separate.
+These are regulator registers, not exhaustive lists of companies in either
+country; membership does not guarantee an available annual report.
+
+Live `find_company()` searches for Petrobras and Copec's RUT returned the
+correct BR/CL routes and selected their annual filings. Local browser search
+on desktop and mobile returned the correct copyable `Company(...)` lines
+for Petrobras, its CNPJ, Copec and its RUT; AAPL still returned the US route.
+Blocking the separate CVM JSON produced an explicit load error, with no
+silently incomplete search list. The CVM subset has its own ODbL license,
+attribution, transformation notes and download; only company names and
+identifiers enter either directory. Both refresh with the existing weekly job.
+The 829-test suite includes old-cache migration, active-status selection,
+source-fetch integration and retention of previous rows during source outages.
+
 ## Brazil and Chile, 2026-10-19
 
 Version 1.1.0 adds two **experimental** national routes. Before publication,

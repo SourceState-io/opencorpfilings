@@ -37,7 +37,9 @@ originals. No filing date is inferred from its query clock. Its signed links
 may expire; reopen the company and select the report for fresh links.
 
 Both support `search_companies`, streamed saves and direct composite-key
-lookup. The cross-market `find_company` index does not include their registers.
+lookup. The cross-market `find_company` index includes active registrations from both
+registers, refreshed weekly. Brazil retains CVM code, CNPJ and trade names;
+Chile retains RUT/name. Browser search loads a separate ODbL Brazil directory.
 The guides document composite IDs, source attribution and request bounds.
 
 ## Issuer lookup and filing selection
