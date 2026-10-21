@@ -32,6 +32,14 @@ and active CMF securities issuers for [Chile](../markets/cl.md). Legal/trade
 names, CVM codes and CNPJs identify Brazilian matches; names and RUTs identify
 Chilean matches. Neither list adds inferred stock tickers.
 
+Argentina and Peru have live source pools through `search_companies()`:
+`search_companies("Central Puerto", market="AR")` returns CUIT-based CNV
+candidates; `search_companies("Alicorp", market="PE")` returns SMV selector
+IDs. Pass a selected `Entity` to `Company`. These two lists are not in the
+cross-market index or browser directory; their specific redistribution terms
+have not been established. See the [Argentina](../markets/ar.md) and
+[Peru](../markets/pe.md) guides.
+
 ## `find_company`
 
 ```python

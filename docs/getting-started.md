@@ -14,7 +14,7 @@ on PyPI.
 Install a tagged release directly:
 
 ```bash
-pip install "opencorpfilings[pdf,markdown,pandas] @ git+https://github.com/sourcestate-io/opencorpfilings@v1.1.1"
+pip install "opencorpfilings[pdf,markdown,pandas] @ git+https://github.com/sourcestate-io/opencorpfilings@v1.2.0"
 ```
 
 Or clone the repository and install from source:
@@ -45,7 +45,7 @@ ocf --version
 ```
 
 ```text
-ocf 1.1.1
+ocf 1.2.0
 ```
 
 ## Credentials

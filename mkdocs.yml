@@ -85,6 +85,8 @@ nav:
       - France (Info-Financiere): markets/fr.md
       - Brazil (CVM): markets/br.md
       - Chile (CMF): markets/cl.md
+      - Argentina (CNV): markets/ar.md
+      - Peru (SMV): markets/pe.md
       - ESEF index: markets/esef.md
       - Experimental routes: markets/experimental.md
   - Concepts:

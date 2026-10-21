@@ -5,12 +5,12 @@ title: "OpenCorpFilings: public company filings worldwide, one Python API"
 abstract: >-
   A Python library that discovers public-company filings at the regulators that
   hold them (SEC EDGAR, UK Companies House, Japan's EDINET, France's AMF/DILA
-  service and the ESEF index) and retrieves the original documents with their
+  service, Brazil's CVM, Chile's CMF, Argentina's CNV, Peru's SMV and the ESEF index) and retrieves the original documents with their
   source identifiers, dates and URLs.
 authors:
   - name: SourceState
-version: 1.1.1
-date-released: 2026-10-19
+version: 1.2.0
+date-released: 2026-10-21
 license: MIT
 repository-code: "https://github.com/sourcestate-io/opencorpfilings"
 keywords:

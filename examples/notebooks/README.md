@@ -8,8 +8,9 @@
 | `04_text_tables_and_facts.ipynb` | facts in UK and FR, an HTML table, the ESEF index's history |
 | `05_find_a_company_and_get_its_files.ipynb` | `find_company` by name, ticker, code, ISIN or LEI; opening a match; `file_types` downloads |
 | `06_brazil_and_chile.ipynb` | keyless CVM/CMF source search, annual PDF saves, report periods and Chilean classic XBRL facts |
+| `07_argentina_and_peru.ipynb` | keyless CNV/SMV source search, original PDFs, SMV XBRL facts, interim statements versus notes, source dates and keys |
 
-Install with `pip install '.[pdf,markdown,pandas]'` and Jupyter. Notebook 06
+Install with `pip install '.[pdf,markdown,pandas]'` and Jupyter. Notebooks 06 and 07
 needs no credentials. For the SEC examples in the other notebooks, in the first
 code cell, uncomment the SEC identity example and replace it with your name
 or organization and a working contact email:

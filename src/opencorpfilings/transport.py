@@ -432,7 +432,7 @@ class HttpTransport:
         self, url: str, *, data: dict[str, str],
         headers: dict[str, str] | None = None,
     ) -> bytes:
-        """Submit one idempotent public search form with the same pacing policy."""
+        """Submit one idempotent public read form with the same pacing policy."""
         request_headers = {"User-Agent": self.user_agent, **(headers or {})}
         return self._request(url, lambda: nullcontext(self.client.post(url, data=data, headers=request_headers)),
                              lambda response: response.content, accept=lambda status: status < 400)

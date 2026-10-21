@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.2.0 ? 2026-10-21
+
+- Argentina (`AR`): CNV source search by CUIT/name, bounded filing-date
+  discovery, AIF presentation UUID lookup and original financial-statement
+  PDF attachments. Related-company rows are excluded; source metadata and
+  filenames are retained. Public download grants are ephemeral.
+- Peru (`PE`): SMV main-market source search, annual/interim case discovery,
+  composite-key lookup, streamed PDF/XBRL originals and raw classic XBRL
+  facts. Notes PDFs stay separate from complete statements. Misdeclared
+  UTF-8/Windows-1252 instances retain their original bytes and disclose
+  decoding on fact provenance.
+- Both routes are experimental and keyless, with dedicated guides and
+  notebook 07. Their company pools use market-specific `search_companies()`;
+  neither list is republished in the cross-market/browser directory.
+- Source date/order, history bounds, scanned PDFs and format-specific gaps
+  are documented. No new runtime dependency or PyPI upload.
+
 ## 1.1.1 — 2026-10-19
 
 - `find_company()` and the browser directory now include active Brazilian CVM

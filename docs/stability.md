@@ -38,11 +38,11 @@ Additions arrive in minor releases and fixes in patch releases.
 ```python
 import opencorpfilings
 
-opencorpfilings.__version__        # '1.1.1'
+opencorpfilings.__version__        # '1.2.0'
 ```
 
 ```bash
-ocf --version                      # ocf 1.1.1
+ocf --version                      # ocf 1.2.0
 ```
 
 The public names and their signatures are listed in the

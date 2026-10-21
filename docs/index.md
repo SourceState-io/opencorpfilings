@@ -22,7 +22,7 @@ filings in bulk across companies. A download covers one company and needs an
 explicit bound.
 
 !!! info "Release status"
-    Version 1.1.1, Python 3.11 to 3.13, MIT
+    Version 1.2.0, Python 3.11 to 3.13, MIT
     licensed. Install from GitHub; the package is not published to PyPI.
     See [Getting started](getting-started.md) to install it.
 
@@ -73,6 +73,8 @@ sources in October 2026; a later run returns later filings.
 | [21 countries](markets/esef.md) | ESEF index (filings.xbrl.org) | LEI | annual | none | <span class="ocf-tier ocf-tier--limited">limited</span> |
 | [BR](markets/br.md) | CVM IPE | CVM code, CNPJ, exact name | annual, current, other | none | <span class="ocf-tier ocf-tier--experimental">experimental</span> |
 | [CL](markets/cl.md) | CMF IFRS | RUT, exact name | annual, interim, quarterly | none | <span class="ocf-tier ocf-tier--experimental">experimental</span> |
+| [AR](markets/ar.md) | CNV / AIF | CUIT, exact name | annual, interim, quarterly | none | <span class="ocf-tier ocf-tier--experimental">experimental</span> |
+| [PE](markets/pe.md) | SMV main market | issuer selector ID, exact name | annual, interim / quarterly | none | <span class="ocf-tier ocf-tier--experimental">experimental</span> |
 | [KR](markets/experimental.md#korea-open-dart) | Open DART | stock code, corporation code | annual, interim, quarterly, other | API key | <span class="ocf-tier ocf-tier--experimental">experimental</span> |
 | [ES, NL, DK, SE, PL, FI](markets/experimental.md) | national officially appointed mechanisms (OAMs) | varies by market | annual, interim (SE also quarterly; PL annual only) | none | <span class="ocf-tier ocf-tier--experimental">experimental</span> |
 

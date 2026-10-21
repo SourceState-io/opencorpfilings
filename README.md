@@ -8,7 +8,7 @@
 <p align="center"><strong>Global company filings. One Python API.</strong></p>
 
 <p align="center">
-  <a href="https://github.com/SourceState-io/opencorpfilings/releases/tag/v1.1.1"><img src="https://img.shields.io/badge/release-1.1.1-0B2545" alt="Release 1.1.1"></a>
+  <a href="https://github.com/SourceState-io/opencorpfilings/releases/tag/v1.2.0"><img src="https://img.shields.io/badge/release-1.2.0-0B2545" alt="Release 1.2.0"></a>
   <a href="#install"><img src="https://img.shields.io/badge/python-3.11–3.13-0B2545" alt="Python 3.11 to 3.13"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-10B981" alt="MIT license"></a>
 </p>
@@ -25,17 +25,17 @@
 # OpenCorpFilings
 
 A Python library for global company filings from SEC EDGAR, Companies House,
-EDINET, France's AMF/DILA service, Brazil's CVM, Chile's CMF and the European ESEF index. Retrieve
+EDINET, France's AMF/DILA service, Brazil's CVM, Chile's CMF, Argentina's CNV, Peru's SMV and the European ESEF index. Retrieve
 original reports and financial statements as filed, read document text,
 and extract HTML tables and raw
 XBRL/iXBRL facts through **one API**, with source IDs, dates and URLs preserved.
 
 ## Install
 
-Release status: **1.1.1**. Install from GitHub; the package is not on PyPI.
+Release status: **1.2.0**. Install from GitHub; the package is not on PyPI.
 
 ```bash
-pip install "opencorpfilings @ git+https://github.com/SourceState-io/opencorpfilings@v1.1.1"
+pip install "opencorpfilings @ git+https://github.com/SourceState-io/opencorpfilings@v1.2.0"
 ```
 
 <details>
@@ -44,7 +44,7 @@ pip install "opencorpfilings @ git+https://github.com/SourceState-io/opencorpfil
 Add only the extras your workflow needs:
 
 ```bash
-pip install "opencorpfilings[pdf,markdown,pandas] @ git+https://github.com/SourceState-io/opencorpfilings@v1.1.1"
+pip install "opencorpfilings[pdf,markdown,pandas] @ git+https://github.com/SourceState-io/opencorpfilings@v1.2.0"
 ```
 
 </details>
@@ -108,6 +108,8 @@ See the [Japan guide](docs/markets/jp.md).
 | [21 EU/EEA countries](docs/markets/esef.md) | ESEF index · filings.xbrl.org | Limited |
 | [Brazil](docs/markets/br.md) | CVM IPE | Experimental |
 | [Chile](docs/markets/cl.md) | CMF IFRS reports | Experimental |
+| [Argentina](docs/markets/ar.md) | CNV / AIF financial statements | Experimental |
+| [Peru](docs/markets/pe.md) | SMV main-market financial reports | Experimental |
 | [South Korea](docs/markets/experimental.md#korea-open-dart) | Open DART | Experimental |
 | [ES, NL, DK, SE, PL, FI](docs/markets/experimental.md) | National filing sources | Experimental |
 
@@ -116,7 +118,7 @@ See the [Japan guide](docs/markets/jp.md).
 - **Limited:** the ESEF index provides tagged annual reports across 21
   countries but can lag national sources.
 - **Experimental:** implemented routes emit a warning and may change in minor
-  releases. Brazil and Chile were added in 1.1.0; European routes await promotion. Korea's document endpoint
+  releases. Argentina and Peru join Brazil and Chile; European routes await promotion. Korea's document endpoint
   reported maintenance during qualification.
 
 Form coverage and authentication vary by source. Inspect a route with
@@ -141,6 +143,24 @@ Brazil returns original IPE PDFs; Chile returns IFRS PDFs and XBRL packages.
 Chile orders reports by period and leaves the filing date unset. Both are
 searchable through `find_company()` and the browser directory by
 name, CVM code/CNPJ (Brazil) or RUT (Chile).
+
+Argentina and Peru also need no API keys. Their company pools are available
+through market-specific source search:
+
+```python
+from opencorpfilings import Company, search_companies
+
+argentina = Company(search_companies("Central Puerto", market="AR", limit=1)[0])
+peru = Company(search_companies("Alicorp", market="PE", limit=1)[0])
+print(argentina.filings(form="annual", limit=1).latest().filing_id)
+print(peru.filings(form="annual", limit=1).latest().filing_id)
+```
+
+[Argentina](docs/markets/ar.md) returns original financial-statement PDFs.
+[Peru](docs/markets/pe.md) returns financial-statement PDFs and, where supplied,
+classic XBRL; some interim cases have XBRL statements with a separate notes PDF.
+These two markets use `search_companies()`, and are not in the cross-market
+`find_company()` index or browser directory.
 
 ## Common workflows
 

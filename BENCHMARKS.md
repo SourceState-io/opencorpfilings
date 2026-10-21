@@ -1,5 +1,65 @@
 # Single-filing benchmarks
 
+## Argentina and Peru, 2026-10-21
+
+Version 1.2.0 adds two **experimental** routes: Argentina CNV/AIF and Peru
+SMV main-market issuers. A named, source-register-confirmed sample selected
+one annual report for ten issuers per market. All 20 original PDFs saved,
+retained source identifiers and passed fresh-provider direct lookup. These
+are bounded smoke checks, not market-wide or historical-recall qualification.
+The local source pools contained 485 CNV CUITs and 202 SMV selector entries;
+register membership does not guarantee a filing for every issuer/period.
+Neither list is republished in the browser/cross-market directory.
+
+| Market | Issuer | Identifier | PDF pages | First-five-page text | Raw facts / source items |
+|---|---|---|---:|---|---:|
+| AR | Central Puerto | `33650305499` | 121 | yes | PDF only |
+| AR | YPF S.A. | `30546689979` | 140 | yes | PDF only |
+| AR | Pampa Energía S.A. | `30526552659` | 144 | yes | PDF only |
+| AR | Telecom Argentina S.A. | `30639453738` | 154 | no text layer in checked pages | PDF only |
+| AR | Transportadora de Gas del Sur S.A. | `30657862068` | 46 | yes | PDF only |
+| AR | Transportadora de Gas del Norte S.A. | `30657863056` | 111 | yes | PDF only |
+| AR | Aluar Aluminio Argentino | `30522780606` | 60 | no text layer in checked pages | PDF only |
+| AR | TERNIUM ARGENTINA S.A. | `30516888241` | 54 | yes | PDF only |
+| AR | Loma Negra  CIASA | `30500530851` | 65 | yes | PDF only |
+| AR | Banco Macro SA | `30500010084` | 185 | yes | PDF only |
+| PE | ALICORP S.A.A. | `73` | 142 | yes | 1,004 / 1,004 |
+| PE | UNION DE CERVECERIAS PERUANAS BACKUS Y JOHNSTON S.A.A. | `47` | 70 | yes | 1,038 / 1,038 |
+| PE | FERREYCORP S.A.A. | `93` | 103 | yes | 1,004 / 1,004 |
+| PE | VOLCAN COMPAÑIA MINERA S.A.A. | `46703` | 111 | yes | 1,004 / 1,004 |
+| PE | COMPAÑIA DE MINAS BUENAVENTURA S.A.A. | `50` | 136 | yes | 1,004 / 1,004 |
+| PE | SOUTHERN COPPER CORPORATION | `18050` | 240 | yes | PDF only |
+| PE | UNACEM CORP SOCIEDAD ANONIMA ABIERTA - UNACEM CORP S.A.A. | `45` | 102 | yes | 1,004 / 1,004 |
+| PE | INRETAIL PERU CORP. | `154527` | 128 | yes | 1,004 / 1,004 |
+| PE | CEMENTOS PACASMAYO S.A.A. | `74470` | 76 | yes | 1,038 / 1,038 |
+| PE | CREDICORP LTD. | `18049` | 182 | yes | PDF only |
+
+Telecom Argentina and Aluar supplied scanned pages: the first five yielded no
+text, while their originals and direct lookups passed. No OCR is claimed.
+All eight Peruvian cases with original XBRL matched an independent count of
+source elements carrying `contextRef`. Southern Copper and Credicorp supplied
+PDFs without XBRL; raw-fact access correctly raises `UnsupportedCapabilityError`.
+Southern Copper's generic `Informacion Financiera` upload is its original
+home-market 10-K PDF, rather than a locally generated report.
+
+Several SMV instances declare UTF-8 but contain Windows-1252 bytes, including
+Spanish issuer names and certificate text. The adapter discloses its decoding
+fallback on every parsed fact; saved bytes and original hashes remain intact.
+Counts are compared after independently decoding those files as Windows-1252.
+This establishes occurrence counts for these originals, not accounting
+comparability or full-document text quality.
+
+Notebook 07 ran all nine code cells live: source search, annual PDF saves,
+page text, Alicorp's 1,004 annual raw facts, an interim case with XBRL statements
+and a separate notes PDF, and direct case lookup. Test-first fixes covered SMV's
+required name/ID fields, six-column interim rows, notes-versus-statements roles,
+misdeclared XML encoding and generic financial-information uploads.
+
+[Machine-readable evidence](benchmarks/country_expansion_20261021.json) contains
+source keys, original hashes, sizes, page counts and fact counts; no originals,
+public attachment grants or session state are bundled. The source guides
+explain request bounds, dates, ordering, issuer scope, rights and formats.
+
 ## Company search pools, 2026-10-19
 
 The 1.1.1 directory build adds 662 active CVM registrations and 336 active

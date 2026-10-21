@@ -15,6 +15,8 @@ _ORIGINAL = {
     "JP": ("edinet", "EDINETProvider"),
     "BR": ("brazil_cvm", "BrazilCVMProvider"),
     "CL": ("chile_cmf", "ChileCMFProvider"),
+    "AR": ("argentina_cnv", "ArgentinaCNVProvider"),
+    "PE": ("peru_smv", "PeruSMVProvider"),
 }
 # Common codes that are not this library's market codes.
 _ALIASES = {"GB": "UK", "USA": "US", "JA": "JP", "JPN": "JP", "KOR": "KR", "FRA": "FR"}

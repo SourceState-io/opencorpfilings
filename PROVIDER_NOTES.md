@@ -25,6 +25,27 @@ Contents:
 - [Command-line details](#command-line-details)
 - [Benchmarks and live checks](#benchmarks-and-live-checks)
 
+## Argentina CNV and Peru SMV
+
+New in 1.2.0; both routes are experimental, keyless and support live
+`search_companies()` plus verified direct filing lookup.
+[Argentina](docs/markets/ar.md) uses CUITs, dated financial-statement listings
+and AIF public presentation UUIDs. It retrieves original PDF attachments through
+the public grant/POST protocol, buffers one selected original and excludes
+explicit related-company rows. Some originals are scanned. Source attachment
+hashes remain opaque; no algorithm is invented.
+[Peru](docs/markets/pe.md) uses main-market issuer selector IDs, report-year
+forms and native expedientes. It streams PDF/XBRL originals and preserves
+separate notes PDFs. Exact fiscal closing dates and amendment flags are not
+inferred from selector labels. Windows-1252 decoding of misdeclared UTF-8
+instances is recorded on fact provenance without altering original bytes.
+
+Both source pools are searched locally by the adapter, but are not in
+`find_company()` or the republished browser directory: redistribution terms
+for these specific registers have not been established. SMV's separately
+licensed open-data services are not treated as a license for all portal data.
+The guides document dates, keys, bounds, source quirks and rights.
+
 ## Brazil CVM and Chile CMF
 
 New in 1.1.0; both routes are experimental and require no API key.
@@ -63,7 +84,7 @@ a ticker-list search result; the original search record remains on
 `company.entity`, and `company.search_result` keeps the selected source
 candidate and its provenance.
 
-`search_companies()` currently supports Brazil CVM, Chile CMF, US SEC, UK Companies House, Korean Open DART,
+`search_companies()` currently supports Argentina CNV, Peru SMV, Brazil CVM, Chile CMF, US SEC, UK Companies House, Korean Open DART,
 Japanese EDINET, Polish KNF, Swedish Finanscentralen, French Info-Financiere,
 Spanish CNMV, the Finnish Nasdaq OAM, the Netherlands AFM financial-reporting
 register and Danish OAM. It
@@ -638,6 +659,10 @@ routes retired on 2026-10-09 have no rows; see
 |---|---|---|---|---|---|---|
 | US SEC | ticker or CIK | form/date, newest filing first; direct accession lookup | HTML, typed exhibits with index descriptions, other archive files, original instance XML where filed | HTML/plain text | original XBRL instance or XML iXBRL tags when present | identifying User-Agent |
 | UK Companies House | company number or exact name | filing history; annual selects filed accounts | public PDF/XHTML/ZIP; API document representations with a key | XHTML and report XHTML inside ZIP | raw inline tags in XHTML or report ZIP | none for public pages; API key optional |
+| BR CVM | CVM code, CNPJ or exact registry name | bounded delivery-year IPE metadata, source restatement flags and direct delivery keys | original IPE PDFs | PDF text where extractable | none; DFP/ITR outside scope | none |
+| CL CMF | RUT or exact active issuer name | public IFRS issuer/period/balance selection; report-period order | PDF and classic XBRL ZIPs | PDF text where extractable | classic XBRL occurrences | none |
+| AR CNV | CUIT or exact registry name | bounded filing-date financial-statement listings; verified AIF UUID lookup | original financial-statement PDF attachments | PDF text where extractable; scanned originals occur | none | none |
+| PE SMV | issuer selector ID or exact selector name | main-market report-year/type/balance cases and expediente keys; report-year order | full-statement PDF or XBRL, separate notes PDFs | PDF text where extractable | classic XBRL occurrences; source encoding fallback disclosed | none |
 | KR Open DART | stock or corporation code; official registry name/code search | form/date, receipts and amendments | original disclosure ZIP; periodic XBRL ZIP when available | original XML/HTML | classic XBRL instance when present | API key |
 | JP EDINET | securities or EDINET code; official registry Japanese/English name/code search | bounded daily discovery, form/source file date | native ZIP, PDF, attachments, English and CSV when flagged | HTML inside original/English ZIP | classic XBRL or XML iXBRL tags when present | API key |
 | FR Info-Financiere OAM | LEI or exact source name; source-name search | source publication order; annual 003000 including secondary source classification on a registration document, half-year 004000, quarterly information 005000/005001/005002; date filters pushed to source; direct diffuser:UIN lookup | original PDF/ZIP/XHTML as linked, including ZIP bytes under `.xbri` | HTML/XHTML, including report inside ZIP; PDF text when extractable | raw inline tags where present | none |

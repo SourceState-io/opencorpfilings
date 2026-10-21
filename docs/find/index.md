@@ -41,6 +41,11 @@ are not on this page. Each search links to Companies House's own search, and
 `find_company()` searches Companies House live. Korea is not listed: Open
 DART's terms do not cover republishing its company list.
 
+Argentina and Peru are available through live Python
+`search_companies(..., market="AR")` and `market="PE"` searches, respectively.
+Their source selectors are not republished here; see the
+[Argentina](../markets/ar.md) and [Peru](../markets/pe.md) guides.
+
 Contains information from [CVM Informação Cadastral](https://dados.cvm.gov.br/dataset/cia_aberta-cad),
 made available under [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/).
 [Download the Brazil search directory](https://sourcestate-io.github.io/opencorpfilings/find/cvm-companies.json) under that license;
