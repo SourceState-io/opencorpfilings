@@ -36,11 +36,12 @@ def ar_row(description='NORMA CONTABLE: NIIF - TIPO BALANCE: INDIVIDUAL - PERIOD
 
 
 class ArgentinaTransport:
-    def __init__(self, wrong_issuer=False, wrong_period=False, foreign_blob=False):
+    def __init__(self, wrong_issuer=False, wrong_period=False, foreign_blob=False, periodicity='1'):
         self.calls = []
         self.wrong_issuer = wrong_issuer
         self.wrong_period = wrong_period
         self.foreign_blob = foreign_blob
+        self.periodicity = periodicity
 
     def get(self, url, **kwargs):
         self.calls.append((url, kwargs))
@@ -48,7 +49,7 @@ class ArgentinaTransport:
             return roster()
         if '/Empresa/' in url:
             return (f'<div id="container-res"><h1>CUIT: 33-65030549-9</h1><div class="panel"><h4>Estados Contables</h4><table><tbody>'
-                    + ar_row() + ar_row('RELAC.: VINCULADA - CUIT: 30500001735 - PERIODICIDAD: 1 - FECHA CIERRE: 2025-12-31', BLOB)
+                    + ar_row().replace('PERIODICIDAD: 1', 'PERIODICIDAD: ' + self.periodicity) + ar_row('RELAC.: VINCULADA - CUIT: 30500001735 - PERIODICIDAD: 1 - FECHA CIERRE: 2025-12-31', BLOB)
                     + '</tbody></table></div></div>').encode()
         assert url == AR_VIEW
         cuit = '30500001735' if self.wrong_issuer else '33650305499'
@@ -109,6 +110,14 @@ def test_argentina_direct_lookup_verifies_issuer_and_does_not_invent_filing_date
         company.get_filing('../../other')
     with pytest.raises(UnsupportedCapabilityError):
         company.filings(include_amendments=False)
+
+
+@pytest.mark.parametrize(('periodicity', 'form'), [('ANUAL', 'annual'), ('SEMESTRAL', 'interim'), ('TRIMESTRAL', 'quarterly')])
+def test_argentina_accepts_source_word_periodicity_labels_without_dropping_history(periodicity, form):
+    provider = ArgentinaCNVProvider(transport=ArgentinaTransport(periodicity=periodicity))
+    filing = Company('33650305499', market='AR', provider=provider).filings(form=form, limit=1).latest()
+    assert filing.provider_metadata['periodicity'] == periodicity
+    assert filing.filing_type_normalized == form.upper()
 
 
 PE_BASE = 'https://www.smv.gob.pe/SIMV/'

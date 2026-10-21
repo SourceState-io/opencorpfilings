@@ -34,8 +34,9 @@ Use `search_companies()` for this market; Argentina is not in the cross-market
 ## Forms and original attachments
 
 The route reads the company's **Estados Contables** section. It maps the
-source's numeric periodicity: `1` to `annual`, `2` to `interim`, and `3` to
-`quarterly`. The complete source description remains `filing_type_raw`.
+source's periodicity: `1` / `ANUAL` to `annual`, `2` / `SEMESTRAL` to
+`interim`, and `3` / `TRIMESTRAL` to `quarterly`. Both numeric and text labels
+occur in source history. The complete source description remains `filing_type_raw`.
 Individual and consolidated submissions remain distinct; no balance preference
 is imposed. Rows explicitly marked as related-company reports are excluded.
 

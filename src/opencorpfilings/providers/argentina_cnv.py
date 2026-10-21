@@ -26,7 +26,8 @@ _VIEW = "https://aif2.cnv.gov.ar/presentations/publicview/"
 _KEY = "https://aif2.cnv.gov.ar/api/ValetKeyProvider/GetPublicValetKey/"
 _BLOB = "https://blob.cnv.gov.ar/BlobWebService.svc/DownloadBlob/"
 _MONTHS = dict(zip(("ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"), range(1, 13)))
-_FORMS = {"1": "ANNUAL", "2": "INTERIM", "3": "QUARTERLY"}
+_FORMS = {"1": "ANNUAL", "2": "INTERIM", "3": "QUARTERLY",
+          "ANUAL": "ANNUAL", "SEMESTRAL": "INTERIM", "TRIMESTRAL": "QUARTERLY"}
 
 
 def _uuid(value: str) -> str:
@@ -170,7 +171,7 @@ class ArgentinaCNVProvider(FilingProvider):
             description = cells[2].get_text(" ", strip=True)
             if re.search(r"RELAC\s*\.:|CONTROLADAS Y VINCULADAS", description, re.I):
                 continue
-            periodicity = re.search(r"PERIODICIDAD:\s*([123])\b", description)
+            periodicity = re.search(r"PERIODICIDAD:\s*(ANUAL|SEMESTRAL|TRIMESTRAL|[123])\b", description, re.I)
             close = re.search(r"FECHA CIERRE:\s*(\d{4}-\d{2}-\d{2})", description)
             anchor = row.select_one('a[href*="/presentations/publicview/"]')
             if not periodicity or not close or anchor is None:
@@ -187,7 +188,7 @@ class ArgentinaCNVProvider(FilingProvider):
                    "source_time": cells[1].get_text(strip=True)}
             filing = Filing(key, entity.entity_id, "AR", self.name, self.regulator, url,
                 Provenance(self.name, self.regulator, "AR", url, raw["presentation_id"], datetime.now(timezone.utc), raw),
-                filing_type_raw=description, filing_type_normalized=_FORMS[periodicity[1]],
+                filing_type_raw=description, filing_type_normalized=_FORMS[periodicity[1].upper()],
                 title=description, filing_date=filed, period_end=date.fromisoformat(close[1]),
                 language="es", provider_metadata=raw, _provider=self)
             if start <= filed <= end and (not form or self.filing_matches_form(filing, form)):
@@ -215,7 +216,7 @@ class ArgentinaCNVProvider(FilingProvider):
                     raise ParseError("AIF presentation is not a recognized financial-statement submission")
                 fields = {p.get("id"): p.text or "" for p in identification.findall("propiedad")}
                 period = date.fromisoformat(fields["FechaCierre"][:10])
-                normalized = _FORMS[fields["PeriodoBalance"]]
+                normalized = _FORMS[fields["PeriodoBalance"].strip().upper()]
                 links = []
                 for prop in root.findall("entidad[@clave='Adjuntos Balance']/propiedad"):
                     if not (prop.text or "").strip().startswith("["):
